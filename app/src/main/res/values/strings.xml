@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BlueAlarm</string>
+    <string name="edittext_hint"><font size="15">Hint here!</font></string>
+    <string name="full_name">Full name</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
 </resources>

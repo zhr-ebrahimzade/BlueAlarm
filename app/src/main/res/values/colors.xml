@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="backgroundColor">#A2D6F9</color>
+    <color name="backgroundColor">#A2D6F9</color><!--Color for activity background-->
     <color name="btn_color">#031544</color><!--Color for background button -->
-    <color name="txt_color">#031544</color><!--Color for textViews-->
-    <color name="editBox_text">#031544</color><!--Color for text in editText-->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
