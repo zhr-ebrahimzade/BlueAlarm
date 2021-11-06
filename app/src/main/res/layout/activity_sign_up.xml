@@ -7,9 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".SignUp"
     android:background="#1AA2D6F9"
-
-    android:layout_gravity="center_horizontal"
-
+    android:paddingStart="28dp"
+    android:paddingEnd="28dp"
   >
 
     <RelativeLayout
@@ -28,13 +27,15 @@
             android:id="@+id/fullName"
             android:layout_width="254dp"
             android:layout_height="48dp"
-            android:background="@color/white"
+            android:background="@drawable/custom_text"
             android:hint="@string/full_name"
             android:inputType="textPersonName"
             android:textColorHint="#4D031544"
             android:textSize="19sp"
             android:textStyle="bold"
-            android:translationZ="4dp" />
+            android:translationZ="4dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
 
         <EditText
             android:id="@+id/username"
@@ -42,13 +43,15 @@
             android:layout_height="48dp"
             android:layout_below="@+id/fullName"
             android:layout_marginTop="20dp"
-            android:background="@color/white"
+            android:background="@drawable/custom_text"
             android:hint="@string/username"
             android:inputType="text"
             android:textColorHint="#4D031544"
             android:textSize="19sp"
             android:textStyle="bold"
-            android:translationZ="4dp" />
+            android:translationZ="4dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
 
         <EditText
             android:id="@+id/email"
@@ -56,13 +59,15 @@
             android:layout_height="48dp"
             android:layout_below="@+id/username"
             android:layout_marginTop="20dp"
-            android:background="@color/white"
+            android:background="@drawable/custom_text"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:textColorHint="#4D031544"
             android:textSize="19sp"
             android:textStyle="bold"
             android:translationZ="4dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
 
             />
 
@@ -72,14 +77,15 @@
             android:layout_height="48dp"
             android:layout_below="@+id/email"
             android:layout_marginTop="20dp"
-            android:background="@color/white"
+            android:background="@drawable/custom_text"
             android:hint="@string/password"
             android:inputType="textPassword"
             android:textColorHint="#4D031544"
             android:textSize="19sp"
             android:textStyle="bold"
             android:translationZ="4dp"
-
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             />
 
         <EditText
@@ -88,14 +94,17 @@
             android:layout_height="49dp"
             android:layout_below="@+id/password"
             android:layout_marginTop="20dp"
-            android:background="@color/white"
+            android:background="@drawable/custom_text"
             android:hint="@string/confirm_password"
             android:inputType="textPassword"
             android:textAllCaps="false"
             android:textColorHint="#4D031544"
             android:textSize="19sp"
             android:textStyle="bold"
-            android:translationZ="4dp" />
+            android:translationZ="4dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            />
 
 
     </RelativeLayout>
@@ -111,7 +120,8 @@
         android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textSize="19sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:cornerRadius="40dp" />
 
 
 </RelativeLayout>

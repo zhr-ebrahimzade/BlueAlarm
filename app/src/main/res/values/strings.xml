@@ -4,9 +4,15 @@
     <string name="full_name">Full name</string>
     <string name="username">Username</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
     <string name="confirm_password">Confirm password</string>
     <string name="check_your_email">Check your email</string>
     <string name="enter_the_code">Enter the code</string>
-    <string name="sign_up">Sign Up</string>
+    <string name="sign_up">Sign up</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="notHavingAccount">Don\'t you have an account?</string>
+    <string name="log_in_as_guest">Log in as guest</string>
+    <string name="alarm">ALARM</string>
+    <string name="blue">BLUE</string>
 </resources>

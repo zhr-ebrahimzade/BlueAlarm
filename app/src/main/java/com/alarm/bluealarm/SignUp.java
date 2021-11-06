@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity /*implements View.OnClickListener*/ {
-    private static final String TAG="Confirmation";
+    private static final String TAG="SignUp";
     EditText name, user,email, pass, confirm;
 
     Button sign_btn;

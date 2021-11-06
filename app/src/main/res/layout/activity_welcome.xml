@@ -25,10 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="false"
-        android:text="BLUE"
+        android:text="@string/blue"
         android:textColor="@color/btn_color"
         android:textSize="34sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.711"
@@ -42,10 +42,10 @@
         android:layout_height="wrap_content"
         android:background="#00F5F6F8"
         android:clickable="false"
-        android:text="ALARM"
+        android:text="@string/alarm"
         android:textColor="@color/btn_color"
         android:textSize="34sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.787"
@@ -54,13 +54,14 @@
         app:layout_constraintVertical_bias="0.184" />
 
     <Button
+        android:translationZ="4dp"
         android:id="@+id/loginbutton1"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/btn_color"
         android:clickable="true"
         android:shadowColor="#F31717"
-        android:text="Log in"
+        android:text="@string/log_in"
         android:textAllCaps="false"
         android:textColor="#F5F6F8"
         android:textSize="19sp"
@@ -71,15 +72,17 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547" />
+        app:layout_constraintVertical_bias="0.547"
+        android:focusable="true" />
 
     <Button
+        android:translationZ="4dp"
         android:id="@+id/signupbutton1"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/btn_color"
         android:clickable="true"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textColor="#F5F6F8"
         android:textSize="19sp"
@@ -90,16 +93,18 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702" />
+        app:layout_constraintVertical_bias="0.702"
+        android:focusable="true" />
 
     <Button
+        android:translationZ="4dp"
         android:id="@+id/loginasguest"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/btn_color"
         android:clickable="true"
         android:shadowRadius="20"
-        android:text="Log in as guest"
+        android:text="@string/log_in_as_guest"
         android:textAllCaps="false"
         android:textColor="#F5F6F8"
         android:textSize="19sp"
@@ -110,6 +115,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.848" />
+        app:layout_constraintVertical_bias="0.848"
+        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

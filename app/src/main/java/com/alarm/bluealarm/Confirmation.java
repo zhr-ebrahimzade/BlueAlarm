@@ -10,8 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Confirmation extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG="MainActivity";
+public class Confirmation extends AppCompatActivity /*implements View.OnClickListener */{
+    private static final String TAG="Confirmation";
 
     ImageView imageView;
     TextView txt1, txt2;
@@ -22,10 +22,13 @@ public class Confirmation extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmation);
-        //init();
-        button.setOnClickListener(this);
 
-    }
+
+  /*      //init();
+        button.setOnClickListener(this);
+        init();
+*/
+    }/*
     private void init(){
 
         imageView.findViewById(R.id.emailImage);
@@ -43,5 +46,5 @@ public class Confirmation extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    /*checks the condition for every view*/
+    *//*checks the condition for every view*/
 }
