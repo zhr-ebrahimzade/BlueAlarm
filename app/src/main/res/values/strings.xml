@@ -6,4 +6,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="check_your_email">Check your email</string>
+    <string name="enter_the_code">Enter the code</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
