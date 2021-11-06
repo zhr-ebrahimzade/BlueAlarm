@@ -11,35 +11,33 @@
     android:layout_gravity="center_horizontal"
 
   >
+
     <RelativeLayout
-        android:gravity="center_horizontal"
         android:id="@+id/editLayout"
         android:layout_width="272dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
         android:layout_marginTop="70dp"
         android:layout_marginRight="44dp"
-        android:layout_marginLeft="44dp"
+        android:gravity="center_horizontal"
         android:padding="18dp"
 
         >
 
         <EditText
             android:id="@+id/fullName"
-            android:textSize="19sp"
-            android:textStyle="bold"
             android:layout_width="254dp"
             android:layout_height="48dp"
             android:background="@color/white"
             android:hint="@string/full_name"
             android:inputType="textPersonName"
             android:textColorHint="#4D031544"
-            android:translationZ="4dp"
-             />
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:translationZ="4dp" />
 
         <EditText
             android:id="@+id/username"
-            android:textSize="19sp"
-            android:textStyle="bold"
             android:layout_width="254dp"
             android:layout_height="48dp"
             android:layout_below="@+id/fullName"
@@ -48,12 +46,12 @@
             android:hint="@string/username"
             android:inputType="text"
             android:textColorHint="#4D031544"
+            android:textSize="19sp"
+            android:textStyle="bold"
             android:translationZ="4dp" />
 
         <EditText
             android:id="@+id/email"
-            android:textSize="19sp"
-            android:textStyle="bold"
             android:layout_width="254dp"
             android:layout_height="48dp"
             android:layout_below="@+id/username"
@@ -62,14 +60,14 @@
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:textColorHint="#4D031544"
+            android:textSize="19sp"
+            android:textStyle="bold"
             android:translationZ="4dp"
 
             />
 
         <EditText
             android:id="@+id/password"
-            android:textSize="19sp"
-            android:textStyle="bold"
             android:layout_width="254dp"
             android:layout_height="48dp"
             android:layout_below="@+id/email"
@@ -78,14 +76,14 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:textColorHint="#4D031544"
+            android:textSize="19sp"
+            android:textStyle="bold"
             android:translationZ="4dp"
 
             />
 
         <EditText
             android:id="@+id/confirmPass"
-            android:textSize="19sp"
-            android:textStyle="bold"
             android:layout_width="247dp"
             android:layout_height="49dp"
             android:layout_below="@+id/password"
@@ -93,10 +91,11 @@
             android:background="@color/white"
             android:hint="@string/confirm_password"
             android:inputType="textPassword"
-            android:textColorHint="#4D031544"
-            android:translationZ="4dp"
             android:textAllCaps="false"
-           />
+            android:textColorHint="#4D031544"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:translationZ="4dp" />
 
 
     </RelativeLayout>
