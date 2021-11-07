@@ -53,8 +53,8 @@
     <Button
         android:translationZ="4dp"
         android:id="@+id/loginbutton2"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
         android:backgroundTint="@color/btn_color"
         android:clickable="true"
         android:focusable="true"
