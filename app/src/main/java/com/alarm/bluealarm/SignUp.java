@@ -26,10 +26,10 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
 
-        if (check()){
+       /* if (check()){*/
             Intent intent = new Intent(SignUp.this, Confirmation.class);
             startActivity(intent);
-        }
+        /*}*/
     }
 
 
