@@ -9,8 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class Confirmation extends AppCompatActivity /*implements View.OnClickListener */{
+public class Confirmation extends AppCompatActivity implements View.OnClickListener{
     private static final String TAG="Confirmation";
 
     ImageView imageView;
@@ -24,21 +25,21 @@ public class Confirmation extends AppCompatActivity /*implements View.OnClickLis
         setContentView(R.layout.activity_confirmation);
 
 
-  /*      //init();
+       //init();
         button.setOnClickListener(this);
         init();
-*/
-    }/*
+
+    }
     private void init(){
 
-        imageView.findViewById(R.id.emailImage);
-        txt1.findViewById(R.id.txt_checck);
-        txt2.findViewById(R.id.txt_enter);
-        edit1.findViewById(R.id.txt1_code);
-        edit2.findViewById(R.id.txt2_code);
-        edit3.findViewById(R.id.txt3_code);
-        edit4.findViewById(R.id.txt4_code);
-        button.findViewById(R.id.login_btn);
+        imageView=findViewById(R.id.emailImage);
+        txt1=findViewById(R.id.txt_checck);
+        txt2=findViewById(R.id.txt_enter);
+        edit1=findViewById(R.id.txt1_code);
+        edit2=findViewById(R.id.txt2_code);
+        edit3=findViewById(R.id.txt3_code);
+        edit4=findViewById(R.id.txt4_code);
+        button=findViewById(R.id.login_btn);
     }
 
     @Override
@@ -46,5 +47,7 @@ public class Confirmation extends AppCompatActivity /*implements View.OnClickLis
 
     }
 
-    *//*checks the condition for every view*/
+    /*checks the condition for every view*/
+
+
 }
