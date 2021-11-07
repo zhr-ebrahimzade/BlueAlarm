@@ -32,6 +32,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         }
     }
 
+
     private void init(){
         name=findViewById(R.id.fullName);
         user=findViewById(R.id.username);
