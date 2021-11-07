@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Confirmation extends AppCompatActivity implements View.OnClickListener{
+public class Confirmation extends AppCompatActivity {
     private static final String TAG="Confirmation";
 
     ImageView imageView;
@@ -23,9 +23,9 @@ public class Confirmation extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmation);
+    }
 
-
-       //init();
+  /*     //init();
         button.setOnClickListener(this);
         init();
 
@@ -45,7 +45,7 @@ public class Confirmation extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-    }
+    }*/
 
     /*checks the condition for every view*/
 
