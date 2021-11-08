@@ -78,7 +78,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
     private boolean check(String username, String useremail, String userpass, String userpassconfirm){
         boolean isOk=true;
             //not null check
-            if (username.length() < 2 || username.isEmpty() ) {
+            if (username.length() < 2 ) {
                 editTextName.setError("Name should be entered!");
                 editTextName.requestFocus();
                 isOk=false;
@@ -105,7 +105,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
             }
 
             //confirm check
-            if(userpassconfirm != userpass){
+            if(!userpassconfirm.equals(userpass)){
                 editTextConfirm.setError("should be equal to password!");
                 editTextPass.requestFocus();
                 isOk = false;
