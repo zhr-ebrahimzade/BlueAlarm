@@ -30,12 +30,12 @@
             android:background="@drawable/custom_text"
             android:hint="@string/full_name"
             android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:textColorHint="#4D031544"
             android:textSize="19sp"
             android:textStyle="bold"
-            android:translationZ="4dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"/>
+            android:translationZ="4dp" />
 
         <EditText
             android:id="@+id/username"
@@ -46,12 +46,12 @@
             android:background="@drawable/custom_text"
             android:hint="@string/username"
             android:inputType="text"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:textColorHint="#4D031544"
             android:textSize="19sp"
             android:textStyle="bold"
-            android:translationZ="4dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"/>
+            android:translationZ="4dp" />
 
         <EditText
             android:id="@+id/email"
@@ -62,12 +62,12 @@
             android:background="@drawable/custom_text"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:textColorHint="#4D031544"
             android:textSize="19sp"
             android:textStyle="bold"
             android:translationZ="4dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
 
             />
 
@@ -80,13 +80,12 @@
             android:background="@drawable/custom_text"
             android:hint="@string/password"
             android:inputType="textPassword"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:textColorHint="#4D031544"
             android:textSize="19sp"
             android:textStyle="bold"
-            android:translationZ="4dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            />
+            android:translationZ="4dp" />
 
         <EditText
             android:id="@+id/confirmPass"
@@ -112,7 +111,7 @@
     <Button
         android:id="@+id/signUp_btn"
         android:layout_width="145dp"
-        android:layout_height="48dp"
+        android:layout_height="55dp"
         android:layout_below="@+id/editLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="27dp"

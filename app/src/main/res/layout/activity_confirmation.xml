@@ -47,8 +47,6 @@
             >
 
             <EditText
-                android:paddingStart="24dp"
-                android:paddingEnd="16dp"
                 android:id="@+id/txt1_code"
                 android:layout_width="49dp"
                 android:layout_height="111dp"
@@ -56,13 +54,14 @@
                 android:background="@drawable/custom_text"
                 android:inputType="number"
                 android:maxLength="1"
+                android:paddingStart="24dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="5dp"
                 android:shadowColor="#000000"
                 android:textSize="19sp"
                 android:textStyle="bold"
-                android:translationZ="4dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                 />
+                android:translationZ="4dp" />
             <EditText
                 android:id="@+id/txt2_code"
                 android:layout_width="49dp"
@@ -117,7 +116,7 @@
     <Button
         android:id="@+id/login_btn"
         android:layout_width="145dp"
-        android:layout_height="48dp"
+        android:layout_height="55dp"
         android:layout_below="@+id/code_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="84dp"
@@ -126,7 +125,6 @@
         android:textAllCaps="false"
         android:textSize="19sp"
         android:textStyle="bold"
-        app:cornerRadius="40dp"
-        />
+        app:cornerRadius="40dp" />
 
 </RelativeLayout>

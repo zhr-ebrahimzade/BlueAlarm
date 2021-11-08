@@ -8,6 +8,7 @@
     <string name="check_your_email">Check your email</string>
     <string name="enter_the_code">Enter the code</string>
     <string name="sign_up">Sign up</string>
+    <string name="underlined"><u>Sign Up</u> </string>
     <string name="password">Password</string>
     <string name="log_in">Log in</string>
     <string name="forgot_password">Forgot password?</string>
