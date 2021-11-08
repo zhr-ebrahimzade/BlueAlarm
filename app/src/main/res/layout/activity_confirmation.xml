@@ -115,8 +115,8 @@
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="145dp"
-        android:layout_height="55dp"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/code_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="84dp"

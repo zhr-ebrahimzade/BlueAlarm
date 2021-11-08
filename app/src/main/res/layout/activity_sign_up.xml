@@ -1,128 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp"
     android:background="#1AA2D6F9"
     android:paddingStart="28dp"
     android:paddingEnd="28dp"
-  >
+    tools:context=".SignUp">
 
-    <RelativeLayout
-        android:id="@+id/editLayout"
-        android:layout_width="272dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginRight="44dp"
-        android:gravity="center_horizontal"
-        android:padding="18dp"
+    <EditText
+        android:id="@+id/fullName"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="41dp"
+        android:background="@drawable/custom_text"
+        android:hint="@string/full_name"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColorHint="#4D031544"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:translationZ="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        >
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/emailAddress"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/custom_text"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="5dp"
 
-        <EditText
-            android:id="@+id/fullName"
-            android:layout_width="254dp"
-            android:layout_height="48dp"
-            android:background="@drawable/custom_text"
-            android:hint="@string/full_name"
-            android:inputType="textPersonName"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColorHint="#4D031544"
-            android:textSize="19sp"
-            android:textStyle="bold"
-            android:translationZ="4dp" />
+        android:paddingRight="5dp"
+        android:textColorHint="#4D031544"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:translationZ="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullName" />
 
-        <EditText
-            android:id="@+id/emailAddress"
-            android:layout_width="254dp"
-            android:layout_height="48dp"
-            android:layout_below="@+id/fullName"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/custom_text"
-            android:hint="@string/username"
-            android:inputType="text"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColorHint="#4D031544"
-            android:textSize="19sp"
-            android:textStyle="bold"
-            android:translationZ="4dp" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/email"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/custom_text"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColorHint="#4D031544"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:translationZ="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirmPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="254dp"
-            android:layout_height="48dp"
-            android:layout_below="@+id/emailAddress"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/custom_text"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColorHint="#4D031544"
-            android:textSize="19sp"
-            android:textStyle="bold"
-            android:translationZ="4dp"
-
-            />
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="254dp"
-            android:layout_height="48dp"
-            android:layout_below="@+id/email"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/custom_text"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColorHint="#4D031544"
-            android:textSize="19sp"
-            android:textStyle="bold"
-            android:translationZ="4dp" />
-
-        <EditText
-            android:id="@+id/confirmPass"
-            android:layout_width="247dp"
-            android:layout_height="49dp"
-            android:layout_below="@+id/password"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/custom_text"
-            android:hint="@string/confirm_password"
-            android:inputType="textPassword"
-            android:textAllCaps="false"
-            android:textColorHint="#4D031544"
-            android:textSize="19sp"
-            android:textStyle="bold"
-            android:translationZ="4dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            />
-
-
-    </RelativeLayout>
+    <EditText
+        android:id="@+id/confirmPass"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/password"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/custom_text"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textAllCaps="false"
+        android:textColorHint="#4D031544"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:translationZ="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/signUp_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
         android:id="@+id/signUp_btn"
-        android:layout_width="145dp"
-        android:layout_height="55dp"
-        android:layout_below="@+id/editLayout"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
+        android:layout_marginBottom="131dp"
         android:backgroundTint="@color/btn_color"
         android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textSize="19sp"
         android:textStyle="bold"
-        app:cornerRadius="40dp" />
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPass" />
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 

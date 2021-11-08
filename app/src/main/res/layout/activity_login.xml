@@ -10,8 +10,10 @@
 
     <EditText
         android:id="@+id/emailAddress"
-        android:layout_width="254dp"
-        android:layout_height="48dp"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/custom_text"
         android:drawableStart="@drawable/ic_person"
         android:drawablePadding="4dp"
@@ -32,8 +34,10 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="254dp"
-        android:layout_height="48dp"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/custom_text"
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="4dp"
@@ -55,8 +59,8 @@
 
     <Button
         android:id="@+id/loginbutton2"
-        android:layout_width="145dp"
-        android:layout_height="55dp"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
         android:backgroundTint="@color/btn_color"
         android:clickable="true"
         android:focusable="true"
