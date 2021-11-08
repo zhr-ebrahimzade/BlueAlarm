@@ -1,5 +1,6 @@
 package com.alarm.bluealarm;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -11,45 +12,48 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Confirmation extends AppCompatActivity {
     private static final String TAG="Confirmation";
 
-    ImageView imageView;
-    TextView txt1, txt2;
-    EditText edit1,edit2,edit3,edit4;
-    Button button;
-
+    Button resetPassBtn;
+    EditText editTextEmail;
+    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmation);
-
-    }
-
-
-  /*     //init();
-        button.setOnClickListener(this);
         init();
 
+
+        resetPassBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String userEmail = editTextEmail.getText().toString().trim();
+                auth.sendPasswordResetEmail(userEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(Confirmation.this, "Check your Email reset your password", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+                finish();
+            }
+        });
+
+
     }
+
     private void init(){
-
-        imageView=findViewById(R.id.emailImage);
-        txt1=findViewById(R.id.txt_checck);
-        txt2=findViewById(R.id.txt_enter);
-        edit1=findViewById(R.id.txt1_code);
-        edit2=findViewById(R.id.txt2_code);
-        edit3=findViewById(R.id.txt3_code);
-        edit4=findViewById(R.id.txt4_code);
-        button=findViewById(R.id.login_btn);
+        resetPassBtn = findViewById(R.id.reset_btn);
+        editTextEmail = findViewById(R.id.email);
+        auth = FirebaseAuth.getInstance();
     }
 
-    @Override
-    public void onClick(View v) {
-
-    }*/
-
-    /*checks the condition for every view*/
 
 
 }

@@ -106,13 +106,6 @@ public class Login extends AppCompatActivity {
      * @param userPass
      */
     public boolean checkInputBox(String userEmail, String userPass){
-        if(userEmail == "" && userPass == ""){
-            email.setError("Email is should be entered!");
-            email.requestFocus();
-            password.setError("Password is should be entered!");
-            password.requestFocus();
-            return false;
-        }
         if(userEmail.isEmpty()){
             email.setError("Email is should be entered!");
             email.requestFocus();
