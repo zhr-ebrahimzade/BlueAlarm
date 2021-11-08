@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.regex.Pattern;
 
 public class Login extends AppCompatActivity {
     private EditText email, password;
@@ -31,7 +34,10 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 String userEmail = email.getText().toString();
                 String userPass = password.getText().toString();
-                userSignin(userEmail, userPass);
+                boolean check = checkInputBox(userEmail, userPass);
+                if(check) {
+                    userSignin(userEmail, userPass);
+                }
             }
         });
 
@@ -82,14 +88,51 @@ public class Login extends AppCompatActivity {
                     if(task.isSuccessful()){
                         // if login is successful then open the main page !
                         Intent intent = new Intent(Login.this, MainActivity.class);
-                        Toast.makeText(Login.this, "Login is Sucessful !" , Toast.LENGTH_LONG).show();
+                        Toast.makeText(Login.this, "Login is Successful !" , Toast.LENGTH_LONG).show();
                         startActivity(intent);
                     }
                     else
-                        {
+                    {
+                        Toast.makeText(Login.this, " Invalid Email or Password !" , Toast.LENGTH_LONG).show();
 
                     }
             }
         });
+    }
+
+    /**
+     * some condition that checks input box content
+     * @param userEmail
+     * @param userPass
+     */
+    public boolean checkInputBox(String userEmail, String userPass){
+        if(userEmail == "" && userPass == ""){
+            email.setError("Email is should be entered!");
+            email.requestFocus();
+            password.setError("Password is should be entered!");
+            password.requestFocus();
+            return false;
+        }
+        if(userEmail.isEmpty()){
+            email.setError("Email is should be entered!");
+            email.requestFocus();
+            return false;
+        }
+        if(!Patterns.EMAIL_ADDRESS.matcher(userEmail).matches()){
+            email.setError("Please provide valid email!");
+            email.requestFocus();
+            return false;
+        }
+        if(userPass.isEmpty()){
+            password.setError("Password is should be entered!");
+            password.requestFocus();
+            return false;
+        }
+        if(userPass.length() < 6){
+            password.setError("Min password length should be 6 character !");
+            password.requestFocus();
+            return false;
+        }
+        return true;
     }
 }
