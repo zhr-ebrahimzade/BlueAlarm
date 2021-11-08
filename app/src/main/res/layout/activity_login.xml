@@ -9,13 +9,14 @@
     tools:context=".Login">
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/emailAddress"
         android:layout_width="254dp"
         android:layout_height="48dp"
         android:background="@drawable/custom_text"
         android:drawableStart="@drawable/ic_person"
         android:drawablePadding="4dp"
-        android:hint="@string/username"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:paddingStart="3dp"
         android:shadowColor="#EF1515"
         android:singleLine="false"

@@ -29,15 +29,16 @@ public class Welcome extends AppCompatActivity implements View.OnClickListener{
 
        switch (v.getId()){
            case (R.id.loginbutton1):
-               intent= new Intent(Welcome.this, Login.class);
+               intent = new Intent(Welcome.this, Login.class);
                break;
            case (R.id.signupbutton1):
-               intent= new Intent(Welcome.this, SignUp.class);
+               intent = new Intent(Welcome.this, SignUp.class);
                break;
            default:
                throw new IllegalStateException("Unexpected value: " + v.getId());
        }
        startActivity(intent);
+       finish();
     }
 
     private void init(){
