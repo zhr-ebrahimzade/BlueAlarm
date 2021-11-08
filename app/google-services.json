@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "689992027172",
+    "project_id": "blue-alarm",
+    "storage_bucket": "blue-alarm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689992027172:android:d662ff6d69f85da7f25cb1",
+        "android_client_info": {
+          "package_name": "com.alarm.bluealarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689992027172-lvakfh8qghq72j1bam1mt2rphmd9o2rt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpmAizOXYQfKgW-N7o1VwGBrhkHjBPRJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689992027172-lvakfh8qghq72j1bam1mt2rphmd9o2rt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
