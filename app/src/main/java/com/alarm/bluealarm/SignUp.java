@@ -1,19 +1,31 @@
 package com.alarm.bluealarm;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class SignUp extends AppCompatActivity implements View.OnClickListener{
     private static final String TAG="SignUp";
-    EditText name, user,email, pass, confirm;
-
+    EditText editTextName, editTextUser,editTextEmail, editTextPass, editTextConfirm;
     Button sign_btn;
+    FirebaseAuth firebaseAuth;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,67 +35,103 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         sign_btn.setOnClickListener(this);
 
     }
+
+
+
+
+
     @Override
     public void onClick(View v) {
+        String userName = editTextName.getText().toString().trim();
+        String userPass = editTextPass.getText().toString().trim();
+        String userConfirm = editTextConfirm.getText().toString().trim();
+        String userEmail = editTextEmail.getText().toString().trim();
 
-       /* if (check()){*/
-            Intent intent = new Intent(SignUp.this, Confirmation.class);
-            startActivity(intent);
-        /*}*/
-    }
-
-
-    private void init(){
-        name=findViewById(R.id.fullName);
-        user=findViewById(R.id.emailAddress);
-        email=findViewById(R.id.email);
-        pass=findViewById(R.id.password);
-        confirm=findViewById(R.id.confirmPass);
-        sign_btn=findViewById(R.id.signUp_btn);
-    }
-
-    /*checks every view to not be empty*/
-    private boolean check(){
-        boolean isOk=true;
-        if (name.getText().toString().trim().isEmpty()
-                || user.getText().toString().trim().isEmpty()
-                || email.getText().toString().trim().isEmpty()
-                || pass.getText().toString().trim().isEmpty()
-                || confirm.getText().toString().trim().isEmpty()) {
-
-            Toast.makeText(this,"Please fill all the boxes",Toast.LENGTH_SHORT).show();
-                isOk=false;
+        boolean checked = check(userName, userEmail, userPass, userConfirm);
+        if (checked){
+            signUp(userName, userEmail, userPass);
         }
-        else {//returns the number of characters
-            if (name.getText().toString().trim().length()<2) {
-                Toast.makeText(this, "Not enough char", Toast.LENGTH_SHORT).show();
+    }
+
+
+    /**
+     * Get ui component & valuation !!
+     */
+    private void init(){
+        editTextName = findViewById(R.id.fullName);
+        editTextUser = findViewById(R.id.emailAddress);
+        editTextEmail = findViewById(R.id.email);
+        editTextPass = findViewById(R.id.password);
+        editTextConfirm = findViewById(R.id.confirmPass);
+        sign_btn = findViewById(R.id.signUp_btn);
+
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference();
+    }
+
+    /**
+     * Check input boxes
+     * @return boolean , user expression  is valid or not !
+     */
+    private boolean check(String username, String useremail, String userpass, String userpassconfirm){
+        boolean isOk=true;
+            //not null check
+            if (username.length() < 2) {
+                editTextName.setError("Email is should be entered!");
+                editTextName.requestFocus();
                 isOk=false;
             }
-            if (user.getText().toString().trim().length()<2) {
-                Toast.makeText(this, "Not enough char", Toast.LENGTH_SHORT).show();
-                isOk=false;
+
+            if(!Patterns.EMAIL_ADDRESS.matcher(useremail).matches()){
+                editTextEmail.setError("Please provide valid email!");
+                editTextEmail.requestFocus();
+                isOk = false;
             }
-            if (email.getText().toString().trim().length()<12){
-                Toast.makeText(this,"",Toast.LENGTH_SHORT).show();
-                isOk=false;
+            if(userpass.isEmpty()){
+                editTextPass.setError("Password is should be entered!");
+                editTextPass.requestFocus();
+                isOk = false;
             }
-            else {
-                if (!email.getText().toString().contains("@")) {
-                    Toast.makeText(this, "Invalid email", Toast.LENGTH_SHORT).show();
-                    isOk=false;
+            if(userpass.length() < 6){
+                editTextPass.setError("Min password length should be 6 character !");
+                editTextPass.requestFocus();
+                isOk = false;
+            }
+
+
+
+            //confirm check
+
+        return isOk;
+    }
+
+
+    /**
+     * Signup method , use realtime database and authentication!
+     * @param username
+     * @param useremail
+     * @param userpass
+     */
+    private void signUp(String username, String useremail, String userpass){
+        firebaseAuth.createUserWithEmailAndPassword(useremail, userpass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    databaseReference.child("Users").child(firebaseAuth.getUid()).child("userName").setValue(username);
+                    Toast.makeText(SignUp.this, " register successfully !" , Toast.LENGTH_LONG).show();
+
+                    //if successful go to main page
+                    Intent intent = new Intent (SignUp.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else{
+                    Toast.makeText(SignUp.this, " not registered !" , Toast.LENGTH_LONG).show();
                 }
             }
-            if (pass.getText().toString().trim().length()<8) {
-                Toast.makeText(this, "Not enough char", Toast.LENGTH_SHORT).show();
-                isOk=false;
-            }
-            if (confirm.getText().toString().equals(pass.getText().toString())){
-                Toast.makeText(this,"Not matched",Toast.LENGTH_SHORT).show();
-                isOk=false;
-            }
-
-        }
-        return isOk;
+        });
     }
 
 

@@ -9,9 +9,13 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class Welcome extends AppCompatActivity implements View.OnClickListener{
 
     Button logIn, signUp, guest;
+    FirebaseAuth auth = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +24,20 @@ public class Welcome extends AppCompatActivity implements View.OnClickListener{
         init();
         logIn.setOnClickListener(this);
         signUp.setOnClickListener(this);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        //check user login or not
+        FirebaseUser user = auth.getCurrentUser();
+        if(user != null){
+            Intent intent = new Intent(Welcome.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
     }
 
