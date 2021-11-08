@@ -105,7 +105,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
             }
 
             //confirm check
-            if(userpassconfirm != userpass){
+            if(!userpassconfirm.equals(userpass)){
                 editTextConfirm.setError("should be equal to password!");
                 editTextPass.requestFocus();
                 isOk = false;
