@@ -56,7 +56,7 @@ public class Welcome extends AppCompatActivity implements View.OnClickListener{
                throw new IllegalStateException("Unexpected value: " + v.getId());
        }
        startActivity(intent);
-       finish();
+//       finish();
     }
 
     private void init(){
