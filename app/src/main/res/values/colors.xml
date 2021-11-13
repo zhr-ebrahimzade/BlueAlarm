@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="backgroundColor">#dee3e7</color><!--Color for activity background-->
+    <color name="backgroundColor">#BFA2D6F9</color><!--Color for activity background-->
+    <color name="secondbackgroundcolor">#BFFFEC33</color>
     <color name="btn_color">#031544</color><!--Color for background button -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -10,4 +11,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="welcome">#F5F6F8</color>
+    <color name="background2">#818181</color>
 </resources>
