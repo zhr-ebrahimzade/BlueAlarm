@@ -39,9 +39,12 @@ public class Confirmation extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Toast.makeText(Confirmation.this, "Check your Email reset your password", Toast.LENGTH_LONG).show();
                         }
+                        else{
+                            Toast.makeText(Confirmation.this, "Some problem occurred ", Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
-                finish();
+//                finish();
             }
         });
 
