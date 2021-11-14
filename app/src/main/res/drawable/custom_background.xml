@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/secondbackgroundcolor"
+                android:endColor="@color/backgroundColor"
+                android:angle="90"
+                android:type="linear"
+                />
+        </shape>
+    </item>
+</selector>
 
-    <gradient
-        android:type="linear"
-        android:angle="10"
-        android:startColor="@color/backgroundColor"
-        android:endColor="@color/secondbackgroundcolor" />
 
 
-</shape>
+
+
+

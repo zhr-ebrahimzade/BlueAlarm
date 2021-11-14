@@ -118,7 +118,7 @@
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="300dp"
+        android:layout_width="290dp"
         android:layout_height="55dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="302dp"
@@ -141,14 +141,14 @@
 
     <Button
         android:id="@+id/reset_btn"
-        android:layout_width="178dp"
+        android:layout_width="173dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="160dp"
         android:backgroundTint="@color/btn_color"
         android:text="Reset Password"
         android:textAllCaps="false"
-        android:textSize="17sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:cornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
