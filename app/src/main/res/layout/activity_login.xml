@@ -9,13 +9,13 @@
 
     <EditText
         android:id="@+id/emailAddress"
-        android:layout_width="300dp"
+        android:layout_width="290dp"
         android:layout_height="55dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/custom_text"
-        android:drawablePadding="4dp"
         android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="4dp"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:paddingStart="5dp"
@@ -33,16 +33,16 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="300dp"
+        android:layout_width="290dp"
         android:layout_height="55dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/custom_text"
+        android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="4dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:drawableStart="@drawable/ic_lock"
         android:paddingStart="5dp"
         android:singleLine="false"
         android:textColorHint="#4D031544"
@@ -58,7 +58,7 @@
 
     <Button
         android:id="@+id/loginbutton2"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/btn_color"
         android:clickable="true"
@@ -66,7 +66,7 @@
         android:text="@string/log_in"
         android:textAllCaps="false"
         android:textColor="#F5F6F8"
-        android:textSize="18sp"
+        android:textSize="17sp"
         android:textStyle="bold"
         android:translationZ="4dp"
         app:cornerRadius="40dp"
