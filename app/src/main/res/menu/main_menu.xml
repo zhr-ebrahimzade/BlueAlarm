@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeItem"
+            android:icon="@drawable/home_icon"
+            android:alpha="0.12"
+            android:color="@color/mainbackground"
+            android:title="Home" />
+        <item
+            android:id="@+id/settingItem"
+            android:icon="@drawable/settings_icon"
+            android:title="Setting" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/shareItem"
+            android:icon="@drawable/share_icon"
+            android:title="Share " />
+        <item
+            android:id="@+id/rateItem"
+            android:icon="@drawable/star_rate_icon"
+            android:title="Rate Us" />
+        <item
+            android:id="@+id/logoutItem"
+            android:icon="@drawable/reply_icon"
+            android:title="Log out" />
+    </group>
+</menu>
