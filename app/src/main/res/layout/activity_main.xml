@@ -39,6 +39,7 @@
         app:layout_constraintVertical_bias="0.448" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/rightcardview"
         android:layout_width="110dp"
         android:layout_height="110dp"
         app:cardBackgroundColor="@color/sideboxcolor"
@@ -56,10 +57,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="25dp"
-            android:fontFamily="@font/segoeuibold"
-            android:text="Pantoprazole"
             android:drawableStart="@drawable/ic_white_dot"
             android:drawablePadding="4dp"
+            android:fontFamily="@font/segoeuibold"
+            android:text="Pantoprazole"
             android:textColor="@color/pillsinsideboxes"
             android:textSize="11sp" />
 
@@ -69,10 +70,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="85dp"
-            android:fontFamily="@font/segoeuibold"
-            android:text="Diclofenac"
             android:drawableStart="@drawable/ic_green_dot"
             android:drawablePadding="4dp"
+            android:fontFamily="@font/segoeuibold"
+            android:text="Diclofenac"
             android:textColor="@color/pillsinsideboxes"
             android:textSize="11sp" />
 
@@ -82,15 +83,16 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="55dp"
-            android:fontFamily="@font/segoeuibold"
-            android:text="Famotidine"
             android:drawableStart="@drawable/ic_purple_dot"
             android:drawablePadding="4dp"
+            android:fontFamily="@font/segoeuibold"
+            android:text="Famotidine"
             android:textColor="@color/pillsinsideboxes"
             android:textSize="11sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/leftcardview"
         android:layout_width="110dp"
         android:layout_height="110dp"
         app:cardBackgroundColor="@color/sideboxcolor"
@@ -144,7 +146,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/midcardview"
         android:layout_width="155dp"
         android:layout_height="155dp"
         app:cardBackgroundColor="@color/middleboxcolor"
@@ -161,7 +163,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="127dp"
-            android:layout_marginTop="115dp"
+            android:layout_marginTop="113dp"
             app:srcCompat="@mipmap/cross" />
 
         <ImageView
@@ -176,40 +178,16 @@
             android:id="@+id/imageView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
+            android:layout_marginStart="125dp"
             android:layout_marginTop="57dp"
             app:srcCompat="@mipmap/dots" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="9dp"
-            android:layout_height="9dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="115dp"
-            app:srcCompat="@mipmap/ellipse6" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="9dp"
-            android:layout_height="9dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="55dp"
-            app:srcCompat="@mipmap/ellipse5" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="9dp"
-            android:layout_height="9dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="85dp"
-            app:srcCompat="@mipmap/ellipse4" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/segoeuibold"
             android:text="23 NOV"
             android:textColor="@color/btn_color"
@@ -219,8 +197,10 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="48dp"
+            android:drawableStart="@drawable/ic_middle_white_dot"
+            android:drawablePadding="4dp"
             android:fontFamily="@font/segoeuibold"
             android:text="Pantoprazole"
             android:textColor="@color/btn_color"
@@ -230,8 +210,10 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="110dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="108dp"
+            android:drawableStart="@drawable/ic_middle_green_dot"
+            android:drawablePadding="4dp"
             android:fontFamily="@font/segoeuibold"
             android:text="Diclofenac"
             android:textColor="@color/btn_color"
@@ -241,8 +223,11 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="78dp"
+            android:drawableStart="@drawable/ic_middle_purple_dot"
+            android:drawablePadding="4dp"
+
             android:fontFamily="@font/segoeuibold"
             android:text="Famotidine"
             android:textColor="@color/btn_color"
