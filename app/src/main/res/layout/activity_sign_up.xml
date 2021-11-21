@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-
-    >
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mainLayout"
@@ -25,7 +23,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="41dp"
             android:background="@drawable/custom_text"
-            android:drawableStart="@drawable/ic_person_pin"
+            android:drawableStart="@drawable/ic_account_circle"
             android:drawablePadding="4dp"
             android:hint="@string/full_name"
             android:inputType="textPersonName"
@@ -94,7 +92,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="48dp"
             android:background="@drawable/custom_text"
-            android:drawableStart="@drawable/ic_check"
+            android:drawableStart="@drawable/ic_check_circle"
             android:drawablePadding="4dp"
             android:hint="@string/confirm_password"
             android:inputType="textPassword"

@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+/*
         init();
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
     //test 2
 
     public void init(){
-        logoutBtn = findViewById(R.id.logoutBtn);
+       // logoutBtn = findViewById(R.id.logoutBtn);
+    */
     }
+
 
 }

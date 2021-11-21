@@ -140,7 +140,11 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
             }
         });
     }
+    public void onBackPressed() {
+        Intent intent = new Intent (SignUp.this , Welcome.class);
+        startActivity(intent);
 
+    }
 
 
 }

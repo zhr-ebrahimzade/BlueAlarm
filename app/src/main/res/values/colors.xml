@@ -10,6 +10,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="welcome">#F5F6F8</color>
-    <color name="background2">#818181</color>
+    <color name="mainbackground">#1AA2D6F9</color>
+    <color name="todaycolor">#0A22E3</color>
+    <color name="todayshadowcolor">#4D0A22E3</color>
+    <color name="middleboxcolor">#FFCE01</color>
+    <color name="sideboxcolor">#99FFCE01</color>
+    <color name="sidedaycolor">#990A22E3</color>
+    <color name="sloganshadow">#33000000</color>
+    <color name="pillsinsideboxes">#99031544</color>
 </resources>

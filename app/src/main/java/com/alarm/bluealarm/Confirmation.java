@@ -3,6 +3,7 @@ package com.alarm.bluealarm;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -55,6 +56,11 @@ public class Confirmation extends AppCompatActivity {
         resetPassBtn = findViewById(R.id.reset_btn);
         editTextEmail = findViewById(R.id.email);
         auth = FirebaseAuth.getInstance();
+    }
+    public void onBackPressed() {
+        Intent intent = new Intent (Confirmation.this , Login.class);
+        startActivity(intent);
+
     }
 
 
