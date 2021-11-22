@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private NavigationView navigationView;
     private Toolbar toolbar;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+    private BottomNavigationView bottomNavigationView;
     FirebaseAuth firebaseAuth ;
 
     @Override
@@ -32,11 +34,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         firebaseAuth = FirebaseAuth.getInstance();
         //Hooks
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_main);
         toolbar = findViewById(R.id.toolbar);
+        bottomNavigationView = findViewById(R.id.bottomNavView);
+
+        //Bottom Nav View
+        bottomNavigationView.setBackground(null);
+//        bottomNavigationView.getMenu().getItem(2).isEnabled();
 
         //Toolbar
         setSupportActionBar(toolbar);
@@ -51,9 +59,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setCheckedItem(R.id.homeItem);
 
-        // get logout btn
-        Menu menu = navigationView.getMenu();
-        logoutBtn = menu.findItem(R.id.logoutItem);
 
     }
 
@@ -84,6 +89,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.rateItem:
                 break;
             case R.id.logoutItem:
+
+                // get logout btn
+                Menu menu = navigationView.getMenu();
+                logoutBtn = menu.findItem(R.id.logoutItem);
                 logoutBtn.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {

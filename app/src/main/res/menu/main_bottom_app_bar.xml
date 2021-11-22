@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/measur_bottom_appbar"
+        android:title="@string/main_menu_measurement"
+        android:icon="@drawable/measur"
+        android:contentDescription="@string/main_menu_measurement"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/home_bottom_appbar"
+        android:contentDescription="@string/main_menu_home"
+        android:icon="@drawable/home_outline"
+        android:title="@string/main_menu_home"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/placeHolder"
+        android:title=""
+        ></item>
+    <item
+        android:id="@+id/date_bottom_appbar"
+        android:contentDescription="@string/main_menu_date"
+        android:icon="@drawable/date"
+        android:title="@string/main_menu_date"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/doctor_bottom_appbar"
+        android:contentDescription="@string/main_menu_doctor"
+        android:icon="@drawable/doctor"
+        android:title="@string/main_menu_doctor"
+        app:showAsAction="ifRoom" />
+
+</menu>

@@ -18,6 +18,12 @@
     <string name="blue">BLUE</string>
 
 
+    <string name="main_menu_measurement">Measurements</string>
+    <string name="main_menu_doctor">Doctor</string>
+    <string name="main_menu_home">Home</string>
+    <string name="main_menu_date">Date</string>
+
+
     <!--to toggle the open close button
        of the navigation drawer-->
     <string name="nav_open">Open</string>
