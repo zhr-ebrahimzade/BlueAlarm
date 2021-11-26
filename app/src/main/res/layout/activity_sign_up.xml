@@ -12,7 +12,7 @@
         android:background="@drawable/custom_background"
         android:paddingStart="28dp"
         android:paddingEnd="28dp"
-        tools:context=".SignUp">
+        tools:context=".auth.SignUp">
 
         <EditText
             android:id="@+id/fullName"

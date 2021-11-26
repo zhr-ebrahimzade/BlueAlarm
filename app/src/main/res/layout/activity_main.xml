@@ -10,6 +10,8 @@
     >
 <!--    tools:openDrawer="start"-->
 
+
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_main"
         android:layout_width="wrap_content"
@@ -17,7 +19,16 @@
         android:layout_gravity="start"
         android:background="@color/yellow_FFC"
         app:headerLayout="@layout/menu_header"
-        app:menu="@menu/main_menu" />
+        app:menu="@menu/main_menu" >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:translationX="20dp"
+            android:translationY="530dp"
+            app:srcCompat="@drawable/pill" />
+    </com.google.android.material.navigation.NavigationView>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -362,8 +373,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:background="@color/btn_color"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             app:backgroundTint="@color/btn_color"
             app:fabCradleMargin="6dp"
             app:fabCradleRoundedCornerRadius="10dp">

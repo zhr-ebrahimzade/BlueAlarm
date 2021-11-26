@@ -14,7 +14,7 @@
         android:id="@+id/user_menu"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/person_outline" />
+        app:srcCompat="@drawable/user_circular" />
 
     <TextView
         android:id="@+id/textView14"

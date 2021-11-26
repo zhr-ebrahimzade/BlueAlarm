@@ -1,4 +1,4 @@
-package com.alarm.bluealarm;
+package com.alarm.bluealarm.auth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.alarm.bluealarm.MainActivity;
+import com.alarm.bluealarm.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -143,7 +145,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
     public void onBackPressed() {
         Intent intent = new Intent (SignUp.this , Welcome.class);
         startActivity(intent);
-
+        finish();
     }
 
 

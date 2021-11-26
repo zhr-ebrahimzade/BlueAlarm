@@ -13,7 +13,8 @@
         android:contentDescription="@string/main_menu_home"
         android:icon="@drawable/home_outline"
         android:title="@string/main_menu_home"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        />
 
     <item android:id="@+id/placeHolder"
         android:title=""

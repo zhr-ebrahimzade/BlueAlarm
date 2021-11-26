@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/custom_background"
-    tools:context=".Confirmation">
+    tools:context=".auth.Confirmation">
 
 
     <!--        <RelativeLayout-->
