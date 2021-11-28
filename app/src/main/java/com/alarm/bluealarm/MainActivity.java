@@ -86,22 +86,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Share" , Toast.LENGTH_LONG).show();
                 break;
             case R.id.rateItem:
+                Intent i = new Intent(MainActivity.this, AddPillsPage.class);
+                startActivity(i);
                 break;
             case R.id.logoutItem:
 
                 // get logout btn
-                Menu menu = navigationView.getMenu();
-                logoutBtn = menu.findItem(R.id.logoutItem);
-                logoutBtn.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem menuItem) {
+//                Menu menu = navigationView.getMenu();
+//                logoutBtn = menu.findItem(R.id.logoutItem);
+//                logoutBtn.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//                    @Override
+//                    public boolean onMenuItemClick(MenuItem menuItem) {
                         firebaseAuth.signOut();
                         Intent intent = new Intent(MainActivity.this, Welcome.class);
                         startActivity(intent);
                         finish();
                         return true;
-                    }
-                });
+//                    }
+//                });
 
         }
         drawerLayout.closeDrawer(GravityCompat.START);

@@ -19,4 +19,8 @@
     <color name="sloganshadow">#33000000</color>
     <color name="pillsinsideboxes">#99031544</color>
     <color name="yellow_FFC">#FFCE01</color>
+    <color name="light_green">#90EE90</color>
+    <color name="gray">#707070</color>
+    <color name="pill_page_back">#dee3e7</color>
+    <color name="text_color">#b3b8c7</color>
 </resources>
