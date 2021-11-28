@@ -89,17 +89,21 @@
             android:layout_marginTop="54dp"
             android:layout_marginEnd="36dp"
             android:layout_weight="1"
-            android:background="@drawable/yellow_rounded_corner_edit_text"
+            android:filterTouchesWhenObscured="false"
             android:fontFamily="@font/segoeuibold"
+            android:hapticFeedbackEnabled="false"
             android:inputType="none"
+            android:layerType="none"
             android:paddingStart="18dp"
             android:paddingLeft="15dp"
             android:paddingTop="0dp"
             android:paddingEnd="0dp"
             android:paddingRight="0dp"
             android:paddingBottom="0dp"
+            android:singleLine="false"
             android:text="Duration of use"
-            android:textColor="@color/text_color" />
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -149,7 +153,8 @@
             android:paddingRight="0dp"
             android:paddingBottom="0dp"
             android:text="Color"
-            android:textColor="@color/text_color" />
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 

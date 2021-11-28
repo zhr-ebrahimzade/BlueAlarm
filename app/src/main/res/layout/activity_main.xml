@@ -10,6 +10,22 @@
     >
 <!--    tools:openDrawer="start"-->
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.alarm.bluealarm.MainViewFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 
     <com.google.android.material.navigation.NavigationView
@@ -30,336 +46,327 @@
             app:srcCompat="@drawable/pill" />
     </com.google.android.material.navigation.NavigationView>
 
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/mainbackground"-->
+<!--        tools:context=".MainActivity">-->
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/mainbackground"
-        tools:context=".MainActivity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/segoeuibold"
-            android:text="Tomorrow"
-            android:textColor="@color/sidedaycolor"
-            android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.920"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.448" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView13"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/segoeuibold"-->
+<!--            android:text="Tomorrow"-->
+<!--            android:textColor="@color/sidedaycolor"-->
+<!--            android:textSize="17sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.920"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.448" />-->
 
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-6dp"
-            android:fontFamily="@font/segoeuibold"
-            android:text="Yesterday"
-            android:textColor="@color/sidedaycolor"
-            android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.080"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.448" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView12"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="-6dp"-->
+<!--            android:fontFamily="@font/segoeuibold"-->
+<!--            android:text="Yesterday"-->
+<!--            android:textColor="@color/sidedaycolor"-->
+<!--            android:textSize="17sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.080"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.448" />-->
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/rightcardview"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            app:cardBackgroundColor="@color/sideboxcolor"
-            app:cardCornerRadius="23dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.966"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.584">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/rightcardview"-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="110dp"-->
+<!--            app:cardBackgroundColor="@color/sideboxcolor"-->
+<!--            app:cardCornerRadius="23dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.966"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.584">-->
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="25dp"
-                android:drawableStart="@drawable/ic_white_dot"
-                android:drawablePadding="4dp"
-                android:fontFamily="@font/segoeuibold"
-                android:text="Pantoprazole"
-                android:textColor="@color/pillsinsideboxes"
-                android:textSize="11sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView9"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:drawableStart="@drawable/ic_white_dot"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:fontFamily="@font/segoeuibold"-->
+<!--                android:text="Pantoprazole"-->
+<!--                android:textColor="@color/pillsinsideboxes"-->
+<!--                android:textSize="11sp" />-->
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="85dp"
-                android:drawableStart="@drawable/ic_green_dot"
-                android:drawablePadding="4dp"
-                android:fontFamily="@font/segoeuibold"
-                android:text="Diclofenac"
-                android:textColor="@color/pillsinsideboxes"
-                android:textSize="11sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView10"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="85dp"-->
+<!--                android:drawableStart="@drawable/ic_green_dot"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:fontFamily="@font/segoeuibold"-->
+<!--                android:text="Diclofenac"-->
+<!--                android:textColor="@color/pillsinsideboxes"-->
+<!--                android:textSize="11sp" />-->
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="55dp"
-                android:drawableStart="@drawable/ic_purple_dot"
-                android:drawablePadding="4dp"
-                android:fontFamily="@font/segoeuibold"
-                android:text="Famotidine"
-                android:textColor="@color/pillsinsideboxes"
-                android:textSize="11sp" />
-        </androidx.cardview.widget.CardView>
+<!--            <TextView-->
+<!--                android:id="@+id/textView11"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="55dp"-->
+<!--                android:drawableStart="@drawable/ic_purple_dot"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:fontFamily="@font/segoeuibold"-->
+<!--                android:text="Famotidine"-->
+<!--                android:textColor="@color/pillsinsideboxes"-->
+<!--                android:textSize="11sp" />-->
+<!--        </androidx.cardview.widget.CardView>-->
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/leftcardview"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            app:cardBackgroundColor="@color/sideboxcolor"
-            app:cardCornerRadius="23dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.03"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.584">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/leftcardview"-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="110dp"-->
+<!--            app:cardBackgroundColor="@color/sideboxcolor"-->
+<!--            app:cardCornerRadius="23dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.03"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.584">-->
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="25dp"
-                android:drawableStart="@drawable/ic_white_dot"
-                android:drawablePadding="4dp"
-                android:fontFamily="@font/segoeuibold"
-                android:text="Pantoprazole"
-                android:textColor="@color/pillsinsideboxes"
-                android:textSize="11sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:drawableStart="@drawable/ic_white_dot"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:fontFamily="@font/segoeuibold"-->
+<!--                android:text="Pantoprazole"-->
+<!--                android:textColor="@color/pillsinsideboxes"-->
+<!--                android:textSize="11sp" />-->
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="85dp"
-                android:drawableStart="@drawable/ic_green_dot"
-                android:drawablePadding="4dp"
-                android:fontFamily="@font/segoeuibold"
-                android:text="Diclofenac"
-                android:textColor="@color/pillsinsideboxes"
-                android:textSize="11sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="85dp"-->
+<!--                android:drawableStart="@drawable/ic_green_dot"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:fontFamily="@font/segoeuibold"-->
+<!--                android:text="Diclofenac"-->
+<!--                android:textColor="@color/pillsinsideboxes"-->
+<!--                android:textSize="11sp" />-->
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="55dp"
-                android:drawableStart="@drawable/ic_purple_dot"
-                android:drawablePadding="4dp"
-                android:fontFamily="@font/segoeuibold"
-                android:text="Famotidine"
-                android:textColor="@color/pillsinsideboxes"
-                android:textSize="11sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView8"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="55dp"-->
+<!--                android:drawableStart="@drawable/ic_purple_dot"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:fontFamily="@font/segoeuibold"-->
+<!--                android:text="Famotidine"-->
+<!--                android:textColor="@color/pillsinsideboxes"-->
+<!--                android:textSize="11sp" />-->
 
-        </androidx.cardview.widget.CardView>
+<!--        </androidx.cardview.widget.CardView>-->
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/midcardview"
-            android:layout_width="155dp"
-            android:layout_height="155dp"
-            app:cardBackgroundColor="@color/middleboxcolor"
-            app:cardCornerRadius="23dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.591">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/midcardview"-->
+<!--            android:layout_width="155dp"-->
+<!--            android:layout_height="155dp"-->
+<!--            app:cardBackgroundColor="@color/middleboxcolor"-->
+<!--            app:cardCornerRadius="23dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.501"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.591">-->
 
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="127dp"
-                android:layout_marginTop="113dp"
-                app:srcCompat="@mipmap/cross" />
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView9"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="127dp"-->
+<!--                android:layout_marginTop="113dp"-->
+<!--                app:srcCompat="@mipmap/cross" />-->
 
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="126dp"
-                android:layout_marginTop="83dp"
-                app:srcCompat="@mipmap/check" />
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView8"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="126dp"-->
+<!--                android:layout_marginTop="83dp"-->
+<!--                app:srcCompat="@mipmap/check" />-->
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="125dp"
-                android:layout_marginTop="57dp"
-                app:srcCompat="@mipmap/dots" />
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView7"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="125dp"-->
+<!--                android:layout_marginTop="57dp"-->
+<!--                app:srcCompat="@mipmap/dots" />-->
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/segoeuibold"
-                android:text="23 NOV"
-                android:textColor="@color/btn_color"
-                android:textSize="17sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:fontFamily="@font/segoeuibold"-->
+<!--                android:text="23 NOV"-->
+<!--                android:textColor="@color/btn_color"-->
+<!--                android:textSize="17sp" />-->
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="48dp"
-                android:drawableStart="@drawable/ic_middle_white_dot"
-                android:drawablePadding="4dp"
-                android:fontFamily="@font/segoeuibold"
-                android:text="Pantoprazole"
-                android:textColor="@color/btn_color"
-                android:textSize="15sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView5"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="48dp"-->
+<!--                android:drawableStart="@drawable/ic_middle_white_dot"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:fontFamily="@font/segoeuibold"-->
+<!--                android:text="Pantoprazole"-->
+<!--                android:textColor="@color/btn_color"-->
+<!--                android:textSize="15sp" />-->
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="108dp"
-                android:drawableStart="@drawable/ic_middle_green_dot"
-                android:drawablePadding="4dp"
-                android:fontFamily="@font/segoeuibold"
-                android:text="Diclofenac"
-                android:textColor="@color/btn_color"
-                android:textSize="15sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView6"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="108dp"-->
+<!--                android:drawableStart="@drawable/ic_middle_green_dot"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:fontFamily="@font/segoeuibold"-->
+<!--                android:text="Diclofenac"-->
+<!--                android:textColor="@color/btn_color"-->
+<!--                android:textSize="15sp" />-->
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="78dp"
-                android:drawableStart="@drawable/ic_middle_purple_dot"
-                android:drawablePadding="4dp"
+<!--            <TextView-->
+<!--                android:id="@+id/textView7"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="78dp"-->
+<!--                android:drawableStart="@drawable/ic_middle_purple_dot"-->
+<!--                android:drawablePadding="4dp"-->
 
-                android:fontFamily="@font/segoeuibold"
-                android:text="Famotidine"
-                android:textColor="@color/btn_color"
-                android:textSize="15sp" />
-        </androidx.cardview.widget.CardView>
+<!--                android:fontFamily="@font/segoeuibold"-->
+<!--                android:text="Famotidine"-->
+<!--                android:textColor="@color/btn_color"-->
+<!--                android:textSize="15sp" />-->
+<!--        </androidx.cardview.widget.CardView>-->
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/segoeuibold"
-            android:shadowColor="@color/todayshadowcolor"
-            android:shadowDx="5"
-            android:shadowDy="10"
-            android:shadowRadius="20"
-            android:text="Today"
-            android:textColor="@color/todaycolor"
-            android:textSize="29sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.384" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/segoeuibold"-->
+<!--            android:shadowColor="@color/todayshadowcolor"-->
+<!--            android:shadowDx="5"-->
+<!--            android:shadowDy="10"-->
+<!--            android:shadowRadius="20"-->
+<!--            android:text="Today"-->
+<!--            android:textColor="@color/todaycolor"-->
+<!--            android:textSize="29sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.498"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.384" />-->
 
-        <TextView
-            android:id="@+id/slogan"
-            android:layout_width="160dp"
-            android:layout_height="70dp"
-            android:fontFamily="@font/segoeuibolditalic"
-            android:gravity="center"
-            android:shadowColor="@color/sloganshadow"
-            android:shadowDx="10"
-            android:shadowDy="10"
-            android:shadowRadius="20"
-            android:text="worry less live healthier"
-            android:textAllCaps="true"
-            android:textColor="@color/btn_color"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.208" />
+<!--        <TextView-->
+<!--            android:id="@+id/slogan"-->
+<!--            android:layout_width="160dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:fontFamily="@font/segoeuibolditalic"-->
+<!--            android:gravity="center"-->
+<!--            android:shadowColor="@color/sloganshadow"-->
+<!--            android:shadowDx="10"-->
+<!--            android:shadowDy="10"-->
+<!--            android:shadowRadius="20"-->
+<!--            android:text="worry less live healthier"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textColor="@color/btn_color"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.501"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.208" />-->
 
-        <TextView
-            android:id="@+id/hour"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="-5dp"
-            android:fontFamily="@font/segoeuibold"
-            android:maxLines="4"
-            android:minLines="2"
-            android:singleLine="false"
-            android:text="2h and 36 min left"
-            android:textColor="@color/btn_color"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.982"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.030" />
+<!--        <TextView-->
+<!--            android:id="@+id/hour"-->
+<!--            android:layout_width="75dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginRight="-5dp"-->
+<!--            android:fontFamily="@font/segoeuibold"-->
+<!--            android:maxLines="4"-->
+<!--            android:minLines="2"-->
+<!--            android:singleLine="false"-->
+<!--            android:text="2h and 36 min left"-->
+<!--            android:textColor="@color/btn_color"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.982"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.030" />-->
 
-        <ImageView
-            android:id="@+id/mainclock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.766"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.049"
-            app:srcCompat="@mipmap/mainclock" />
+<!--        <ImageView-->
+<!--            android:id="@+id/mainclock"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.766"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.049"-->
+<!--            app:srcCompat="@mipmap/mainclock" />-->
 
-        <ImageView
-            android:id="@+id/circle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-135dp"
-            android:layout_marginRight="-150dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@mipmap/circle" />
+<!--        <ImageView-->
+<!--            android:id="@+id/circle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="-135dp"-->
+<!--            android:layout_marginRight="-150dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="1.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.0"-->
+<!--            app:srcCompat="@mipmap/circle" />-->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

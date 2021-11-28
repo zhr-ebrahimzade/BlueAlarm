@@ -32,11 +32,10 @@
 
 
     <string-array name="duration_dropdown">
-       <item>once in day</item>
+        <item>once in day</item>
         <item>once in month</item>
         <item>once in year</item>
     </string-array>
-
 
 
     <string-array name="color_dropdown">
@@ -44,7 +43,6 @@
         <item>yellow</item>
         <item>Orange</item>
     </string-array>
-
 
 
 </resources>
