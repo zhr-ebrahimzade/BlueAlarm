@@ -66,6 +66,7 @@
         android:inputType="textMultiLine"
         android:paddingLeft="15dp"
         android:paddingEnd="10dp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
@@ -84,8 +85,9 @@
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteDuration"
-            android:layout_width="230dp"
+            android:layout_width="242dp"
             android:layout_height="45dp"
+            android:layout_marginStart="-10dp"
             android:layout_marginTop="54dp"
             android:layout_marginEnd="36dp"
             android:layout_weight="1"
@@ -94,16 +96,17 @@
             android:hapticFeedbackEnabled="false"
             android:inputType="none"
             android:layerType="none"
-            android:paddingStart="18dp"
-            android:paddingLeft="15dp"
+            android:paddingStart="21dp"
+            android:paddingLeft="0dp"
             android:paddingTop="0dp"
             android:paddingEnd="0dp"
             android:paddingRight="0dp"
-            android:paddingBottom="0dp"
+            android:paddingBottom="3dp"
+            android:popupBackground="@color/white"
             android:singleLine="false"
             android:text="Duration of use"
             android:textColor="@color/text_color"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -143,18 +146,19 @@
             android:id="@+id/autoCompleteTextViewColor"
             android:layout_width="115dp"
             android:layout_height="45dp"
+            android:layout_marginStart="-10dp"
             android:layout_weight="1"
             android:fontFamily="@font/segoeuibold"
             android:inputType="none"
-            android:paddingStart="18dp"
-            android:paddingLeft="15dp"
+            android:paddingStart="21dp"
+            android:paddingLeft="0dp"
             android:paddingTop="0dp"
             android:paddingEnd="0dp"
             android:paddingRight="0dp"
-            android:paddingBottom="0dp"
+            android:paddingBottom="5dp"
             android:text="Color"
             android:textColor="@color/text_color"
-            android:textSize="17sp" />
+            android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
