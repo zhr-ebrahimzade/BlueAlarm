@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.fragmentContainerView, mainViewFragment);
 
         //addrecords fragment creation
-        AddRecords addrecords = new AddRecords();
+        AddRecordsFragment addrecords = new AddRecordsFragment();
 
         //addpills fragment creation
         AddPillsFragment addPillsFragment = new AddPillsFragment();

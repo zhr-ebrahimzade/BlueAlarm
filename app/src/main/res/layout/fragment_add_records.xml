@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/add_record_back"
-    tools:context=".AddRecords">
+    tools:context=".AddRecordsFragment">
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/newrecord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/yugothb"
@@ -30,6 +30,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:inputType="number"
+        android:paddingStart="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.246"
@@ -47,6 +48,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:inputType="number"
+        android:paddingStart="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.890"
@@ -64,6 +66,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:inputType="number"
+        android:paddingStart="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.890"
@@ -82,6 +85,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:inputType="number"
+        android:paddingStart="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.246"
@@ -91,7 +95,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/SYS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/yugothb"
@@ -106,7 +110,7 @@
         app:layout_constraintVertical_bias="0.276" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/DYA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/yugothb"
@@ -121,7 +125,7 @@
         app:layout_constraintVertical_bias="0.276" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/PLU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/yugothb"
@@ -136,7 +140,7 @@
         app:layout_constraintVertical_bias="0.531" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/FBS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/yugothb"
@@ -151,7 +155,7 @@
         app:layout_constraintVertical_bias="0.531" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/pulse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/pulse"
@@ -163,7 +167,7 @@
         app:layout_constraintVertical_bias="0.08" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/done"
         android:layout_width="105dp"
         android:layout_height="57dp"
         android:backgroundTint="@color/btn_color"
@@ -179,31 +183,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.71" />
 
-    <LinearLayout
+
+    <Button
+        android:id="@+id/listbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:background="#00A2D6F9"
-        android:orientation="horizontal"
+        android:drawableLeft="@drawable/list"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/segoeuibold"
+        android:text="show previous records"
+        android:textAllCaps="false"
+        android:textColor="@color/btn_color"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.82">
-
-        <Button
-            android:id="@+id/listbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-
-            android:background="#00A2D6F9"
-            android:drawableLeft="@drawable/list"
-            android:drawablePadding="20dp"
-            android:fontFamily="@font/segoeuibold"
-            android:text="show previous records"
-            android:textAllCaps="false"
-            android:textColor="@color/btn_color"
-            android:textSize="20sp" />
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.820" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
