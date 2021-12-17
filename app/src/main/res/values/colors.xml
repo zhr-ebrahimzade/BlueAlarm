@@ -13,7 +13,6 @@
     <color name="mainbackground">#1AA2D6F9</color>
     <color name="todaycolor">#0A22E3</color>
     <color name="todayshadowcolor">#4D0A22E3</color>
-    <color name="middleboxcolor">#FFCE01</color>
     <color name="sideboxcolor">#99FFCE01</color>
     <color name="sidedaycolor">#990A22E3</color>
     <color name="sloganshadow">#33000000</color>
@@ -21,6 +20,7 @@
     <color name="yellow_FFC">#FFCE01</color>
     <color name="light_green">#90EE90</color>
     <color name="gray">#707070</color>
+    <color name="add_record_back">#1AA2D6F9</color>
     <color name="pill_page_back">#dee3e7</color>
     <color name="text_color">#b3b8c7</color>
 </resources>

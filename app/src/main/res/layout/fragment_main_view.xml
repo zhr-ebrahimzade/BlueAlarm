@@ -165,7 +165,8 @@
             android:id="@+id/midcardview"
             android:layout_width="155dp"
             android:layout_height="155dp"
-            app:cardBackgroundColor="@color/middleboxcolor"
+            android:focusableInTouchMode="true"
+            app:cardBackgroundColor="@color/yellow_FFC"
             app:cardCornerRadius="23dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -243,7 +244,6 @@
                 android:layout_marginTop="78dp"
                 android:drawableStart="@drawable/ic_middle_purple_dot"
                 android:drawablePadding="4dp"
-
                 android:fontFamily="@font/segoeuibold"
                 android:text="Famotidine"
                 android:textColor="@color/btn_color"

@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     private BottomAppBar bottomAppBar;
     private FloatingActionButton floatingActionButton;
+
+
     FirebaseAuth firebaseAuth ;
 
 
@@ -56,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         MainViewFragment mainViewFragment = new MainViewFragment();
         fragmentTransaction.replace(R.id.fragmentContainerView, mainViewFragment);
+
+        //addrecords fragment creation
+        AddRecords addrecords = new AddRecords();
+
+        //addpills fragment creation
+        AddPillsFragment addPillsFragment = new AddPillsFragment();
 
         //firebase instance
         firebaseAuth = FirebaseAuth.getInstance();
@@ -124,24 +132,30 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                while (true) {
+                    switch (item.getItemId()) {
+                        case R.id.home_bottom_appbar:
+                            fragmentTransaction.replace(R.id.fragmentContainerView, mainViewFragment);
+                            menu.findItem(item.getItemId()).setShowAsAction(item.getItemId());
+                            break;
+                        case R.id.measur_bottom_appbar:
 
-                switch (item.getItemId()){
-                    case R.id.home_bottom_appbar:
-                        fragmentTransaction.replace(R.id.fragmentContainerView, mainViewFragment);
-                        menu.findItem(item.getItemId()).setShowAsAction(item.getItemId());
-                        break;
-                    case R.id.measur_bottom_appbar:
-                        Toast.makeText(MainActivity.this,"Test", Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.doctor_bottom_appbar:
-                        break;
-                    case R.id.date_bottom_appbar:
-                        break;
-                    case R.id.placeHolder:
-                        break;
+                            fragmentTransaction.replace(R.id.fragmentContainerView, addrecords);
+
+                            menu.findItem(item.getItemId()).setShowAsAction(item.getItemId());
+
+                            //Toast.makeText(MainActivity.this,"Test", Toast.LENGTH_LONG).show();
+                            break;
+                        case R.id.doctor_bottom_appbar:
+                            break;
+                        case R.id.date_bottom_appbar:
+                            break;
+                        case R.id.placeHolder:
+                            break;
+                    }
+                    fragmentTransaction.commit();
+                    return true;
                 }
-                fragmentTransaction.commit();
-                return true;
             }
         });
 
@@ -151,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AddPillsFragment addPillsFragment = new AddPillsFragment();
+
                 fragmentTransaction.replace(R.id.fragmentContainerView, addPillsFragment);
                 fragmentTransaction.commit();
             }
@@ -170,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
         super.onBackPressed();
         }
     }
+
 
 }
 

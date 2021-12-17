@@ -1,6 +1,7 @@
 package com.alarm.bluealarm;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
@@ -252,7 +253,9 @@ public class AddPillsFragment extends Fragment {
 
 
         return view;
+
     }
+
 }
 
 

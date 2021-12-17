@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/measur_bottom_appbar"
-        android:title="@string/main_menu_measurement"
         android:icon="@drawable/measur"
+
         android:contentDescription="@string/main_menu_measurement"
         app:showAsAction="ifRoom"
-        />
+        android:title="@string/main_menu_measurement" />
     <item
         android:id="@+id/home_bottom_appbar"
         android:contentDescription="@string/main_menu_home"
