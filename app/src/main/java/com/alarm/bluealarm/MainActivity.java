@@ -27,7 +27,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements BottomNavigationView.OnNavigationItemSelectedListener{
 //     implements NavigationView.OnNavigationItemSelectedListener
     //variables
     private MenuItem logoutBtn;
@@ -43,27 +43,16 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth ;
 
 
+    //fragment initialise
+//    FragmentManager fragmentManager = getSupportFragmentManager();
+//    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-
-        //fragment initialise
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        MainViewFragment mainViewFragment = new MainViewFragment();
-        fragmentTransaction.replace(R.id.fragmentContainerView, mainViewFragment);
-
-        //addrecords fragment creation
-        AddRecordsFragment addrecords = new AddRecordsFragment();
-
-        //addpills fragment creation
-        AddPillsFragment addPillsFragment = new AddPillsFragment();
 
         //firebase instance
         firebaseAuth = FirebaseAuth.getInstance();
@@ -79,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setBackground(null);
         Menu menu = bottomNavigationView.getMenu();
 //        bottomNavigationView.getMenu().getItem(2).isEnabled(false);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        bottomNavigationView.setSelectedItemId(R.id.home_bottom_appbar);
 
         //Toolbar
         setSupportActionBar(toolbar);
@@ -128,36 +119,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                while (true) {
-                    switch (item.getItemId()) {
-                        case R.id.home_bottom_appbar:
-                            fragmentTransaction.replace(R.id.fragmentContainerView, mainViewFragment);
-                            menu.findItem(item.getItemId()).setShowAsAction(item.getItemId());
-                            break;
-                        case R.id.measur_bottom_appbar:
-
-                            fragmentTransaction.replace(R.id.fragmentContainerView, addrecords);
-
-                            menu.findItem(item.getItemId()).setShowAsAction(item.getItemId());
-
-                            //Toast.makeText(MainActivity.this,"Test", Toast.LENGTH_LONG).show();
-                            break;
-                        case R.id.doctor_bottom_appbar:
-                            break;
-                        case R.id.date_bottom_appbar:
-                            break;
-                        case R.id.placeHolder:
-                            break;
-                    }
-                    fragmentTransaction.commit();
-                    return true;
-                }
-            }
-        });
+//
+//        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                return false;
+//            }
+//        });
 
 
 
@@ -166,8 +134,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                fragmentTransaction.replace(R.id.fragmentContainerView, addPillsFragment);
-                fragmentTransaction.commit();
+                getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerView, new AddPillsFragment()).commit();
             }
         });
 
@@ -186,6 +153,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.home_bottom_appbar:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new MainViewFragment()).commit();
+                return true;
+            case R.id.measur_bottom_appbar:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new AddRecordsFragment()).commit();
+                return true;
+
+            case R.id.doctor_bottom_appbar:
+                return false;
+            case R.id.date_bottom_appbar:
+                return false;
+            case R.id.placeHolder:
+                return false;
+        }
+        return false;
+    }
 }
 
 
