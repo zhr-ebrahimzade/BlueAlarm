@@ -6,6 +6,8 @@
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/autocomplete_frame.xml" value="0.21481481481481482" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/custom_background.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/custom_text.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/doctor_icon.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/doctor_image.xml" value="0.24074074074074073" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/home_icon.xml" value="0.22592592592592592" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/ic_account_circle.xml" value="0.21481481481481482" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2222222222222222" />
@@ -14,6 +16,7 @@
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2703125" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.22592592592592592" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/ic_check_circle.xml" value="0.21481481481481482" />
+        <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/ic_clipart1252462.xml" value="0.24074074074074073" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/ic_ellipse_1.xml" value="0.21481481481481482" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/drawable/ic_middle_green_dot.xml" value="0.21481481481481482" />
@@ -29,11 +32,12 @@
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/activity_confirmation.xml" value="0.264" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/activity_sign_up.xml" value="0.5224839400428265" />
+        <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/activity_welcome.xml" value="0.2" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/activity_welcome1.xml" value="0.176" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/dropdawn_item.xml" value="0.536" />
-        <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/fragment_add_pills.xml" value="0.19384057971014493" />
+        <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/fragment_add_doctor.xml" value="0.2" />
+        <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/fragment_add_pills.xml" value="0.264" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/fragment_add_records.xml" value="0.264" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/fragment_day_dropdown.xml" value="0.264" />
         <entry key="..\:/Users/Arezoo/AndroidStudioProjects/BlueAlarm/app/src/main/res/layout/fragment_main_view.xml" value="0.19384057971014493" />

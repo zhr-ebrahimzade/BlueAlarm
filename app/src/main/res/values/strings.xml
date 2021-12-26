@@ -16,7 +16,7 @@
     <string name="log_in_as_guest">Log in as guest</string>
     <string name="alarm">ALARM</string>
     <string name="blue">BLUE</string>
-    <string name="main_menu_measurement">Measurements</string>
+    <string name="main_menu_measurement">Record</string>
     <string name="main_menu_doctor">Doctor</string>
     <string name="main_menu_home">Home</string>
     <string name="main_menu_date">Date</string>
@@ -43,8 +43,15 @@
         <item>yellow</item>
         <item>Orange</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="doctor_time">
+        <item>8am</item>
+        <item>9am</item>
+        <item>10am</item>
+    </string-array>
+
+
 
 
 </resources>

@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/pill_page_back"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pill_page_back"
     tools:context=".AddPillsFragment">
 
-        <EditText
-            android:id="@+id/editTextTextPillName"
-            android:layout_width="340dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="68dp"
-            android:background="@drawable/yellow_rounded_corner_edit_text"
-            android:ems="10"
-            android:fontFamily="@font/segoeuibold"
-            android:hint="Enter pill name"
-            android:inputType="textPersonName"
-            android:paddingStart="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/editTextTextPillName"
+        android:layout_width="340dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/yellow_rounded_corner_edit_text"
+        android:ems="10"
+        android:fontFamily="@font/segoeuibold"
+        android:hint="Enter pill name"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-        <!--    <com.google.android.material.textfield.TextInputLayout-->
-        <!--        android:id="@+id/textInputLayoutDuration"-->
-        <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
-        <!--        android:layout_width="230dp"-->
-        <!--        android:layout_height="45dp"-->
-        <!--        android:layout_marginTop="45dp"-->
-        <!--        android:layout_marginEnd="36dp"-->
-        <!--        android:background="@drawable/yellow_rounded_corner_edit_text"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">-->
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        android:id="@+id/textInputLayoutDuration"-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+    <!--        android:layout_width="230dp"-->
+    <!--        android:layout_height="45dp"-->
+    <!--        android:layout_marginTop="45dp"-->
+    <!--        android:layout_marginEnd="36dp"-->
+    <!--        android:background="@drawable/yellow_rounded_corner_edit_text"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">-->
 
 
-        <!--        <AutoCompleteTextView-->
-        <!--            android:id="@+id/autoCompleteTextViewDuration"-->
-        <!--            android:layout_width="230dp"-->
-        <!--            android:layout_height="45dp"-->
-        <!--            android:layout_weight="1"-->
-        <!--            android:background="@android:drawable/list_selector_background"-->
-        <!--            android:inputType="none"-->
-        <!--            android:paddingStart="18dp"-->
-        <!--            android:paddingLeft="15dp"-->
-        <!--            android:paddingTop="0dp"-->
-        <!--            android:paddingEnd="0dp"-->
-        <!--            android:paddingRight="0dp"-->
-        <!--            android:paddingBottom="0dp"-->
-        <!--            android:text="Duration of use" />-->
-        <!--    </com.google.android.material.textfield.TextInputLayout>-->
+    <!--        <AutoCompleteTextView-->
+    <!--            android:id="@+id/autoCompleteTextViewDuration"-->
+    <!--            android:layout_width="230dp"-->
+    <!--            android:layout_height="45dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:background="@android:drawable/list_selector_background"-->
+    <!--            android:inputType="none"-->
+    <!--            android:paddingStart="18dp"-->
+    <!--            android:paddingLeft="15dp"-->
+    <!--            android:paddingTop="0dp"-->
+    <!--            android:paddingEnd="0dp"-->
+    <!--            android:paddingRight="0dp"-->
+    <!--            android:paddingBottom="0dp"-->
+    <!--            android:text="Duration of use" />-->
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
 
     <EditText
@@ -72,159 +72,159 @@
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="230dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="230dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="37dp"
+        android:background="@drawable/yellow_rounded_corner_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDay">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteDuration"
+            android:layout_width="240dp"
             android:layout_height="45dp"
-            android:layout_marginTop="45dp"
-            android:layout_marginEnd="37dp"
-            android:background="@drawable/yellow_rounded_corner_edit_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDay">
-
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteDuration"
-                android:layout_width="240dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="54dp"
-                android:layout_marginEnd="36dp"
-                android:layout_marginBottom="3dp"
-                android:layout_weight="1"
-                android:filterTouchesWhenObscured="false"
-                android:fontFamily="@font/segoeuibold"
-                android:hapticFeedbackEnabled="false"
-                android:inputType="none"
-                android:layerType="none"
-                android:paddingStart="18dp"
-                android:paddingLeft="15dp"
-                android:paddingTop="0dp"
-                android:paddingEnd="0dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="0dp"
-                android:singleLine="false"
-                android:text="Duration of use"
-                android:textColor="@color/text_color"
-                android:textSize="17sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <TextView
-            android:id="@+id/textViewDay"
-            android:layout_width="230dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="145dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="-5dp"
+            android:layout_marginTop="54dp"
             android:layout_marginEnd="36dp"
-            android:background="@drawable/yellow_rounded_corner_edit_text"
-            android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:filterTouchesWhenObscured="false"
             android:fontFamily="@font/segoeuibold"
-            android:hint="Day"
+            android:hapticFeedbackEnabled="false"
+            android:inputType="none"
+            android:layerType="none"
+            android:paddingStart="18dp"
             android:paddingLeft="15dp"
-            android:paddingTop="15dp"
-            android:paddingEnd="15dp"
-            android:paddingBottom="10dp"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPillName" />
+            android:paddingTop="0dp"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:singleLine="false"
+            android:text="Duration of use"
+            android:textColor="@color/text_color"
+            android:textSize="17sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutColor"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="100dp"
+
+    <TextView
+        android:id="@+id/textViewDay"
+        android:layout_width="230dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/yellow_rounded_corner_edit_text"
+        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+        android:fontFamily="@font/segoeuibold"
+        android:hint="Day"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPillName" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/yellow_rounded_corner_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPillName">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewColor"
+            android:layout_width="115dp"
             android:layout_height="45dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="48dp"
-            android:background="@drawable/yellow_rounded_corner_edit_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPillName">
+            android:layout_marginStart="-10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/segoeuibold"
+            android:inputType="none"
+            android:paddingStart="21dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:text="Color"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextViewColor"
-                android:layout_width="115dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="-10dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/segoeuibold"
-                android:inputType="none"
-                android:paddingStart="21dp"
-                android:paddingTop="0dp"
-                android:paddingEnd="0dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="0dp"
-                android:text="Color"
-                android:textColor="@color/text_color"
-                android:textSize="16sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="9dp"
+        android:background="@drawable/yellow_rounded_corner_edit_text"
+        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+        android:fontFamily="@font/segoeuibold"
+        android:hint="Time"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutColor" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/yellow_rounded_corner_edit_text"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionEditText">
 
         <TextView
-            android:id="@+id/textViewTime"
-            android:layout_width="100dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="9dp"
-            android:background="@drawable/yellow_rounded_corner_edit_text"
-            android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:fontFamily="@font/segoeuibold"
-            android:hint="Time"
-            android:paddingLeft="15dp"
-            android:paddingTop="15dp"
-            android:paddingEnd="15dp"
-            android:paddingBottom="8dp"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/textInputLayout"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutColor" />
+            android:paddingLeft="20dp"
+            android:text="Reminder"
+            android:textSize="16sp" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/yellow_rounded_corner_edit_text"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/descriptionEditText">
-
-            <TextView
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/segoeuibold"
-                android:paddingLeft="20dp"
-                android:text="Reminder"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:checked="false" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textViewShowPillsList"
+        <CheckBox
+            android:id="@+id/checkBox"
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:drawableLeft="@drawable/ic_layer_2"
-            android:drawablePadding="10dp"
-            android:fontFamily="@font/segoeuibold"
-            android:text="Show Pills List"
-            android:textColor="@color/btn_color"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+            android:layout_weight="1"
+            android:checked="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewShowPillsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:drawableLeft="@drawable/ic_layer_2"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/segoeuibold"
+        android:text="Show Pills List"
+        android:textColor="@color/btn_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

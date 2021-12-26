@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addDoctorFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pill_page_back">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/doctorimg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextDoctorName"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="132dp"
+            android:background="@drawable/yellow_rounded_corner_edit_text"
+            android:ems="10"
+            android:fontFamily="@font/segoeuibold"
+            android:hint="Doctor Name"
+            android:inputType="textPersonName"
+            android:paddingStart="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextSpeciality"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="208dp"
+            android:background="@drawable/yellow_rounded_corner_edit_text"
+            android:ems="10"
+            android:fontFamily="@font/segoeuibold"
+            android:hint="Speciality of Doctor "
+            android:inputType="textPersonName"
+            android:paddingStart="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/yellow_rounded_corner_edit_text"
+            android:checked="true"
+            android:fontFamily="@font/segoeuibold"
+            android:padding="15dp"
+            android:switchMinWidth="60dp"
+            android:switchPadding="30dp"
+            android:text="Reminder "
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:theme="@style/switchBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSpeciality" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutTime"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="360dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/yellow_rounded_corner_edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewTime"
+                android:layout_width="115dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="-10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/segoeuibold"
+                android:inputType="none"
+                android:paddingStart="21dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:text="Time"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="104dp"
+            android:backgroundTint="@color/btn_color"
+            android:fontFamily="@font/segoeuibold"
+            android:padding="10dp"
+            android:text="done"
+            android:textColor="@color/yellow_FFC"
+            android:textSize="14sp"
+            app:cornerRadius="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

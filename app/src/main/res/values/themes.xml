@@ -23,5 +23,13 @@
 
     <style name="Theme.BlueAlarm.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="switchBtn" parent="Theme.AppCompat.Light">
+<!--        active-->
+        <item name="colorControlActivated">#031544</item>
+<!--        inactive-->
+        <item name="colorSwitchThumbNormal">@color/gray</item>
+
+
+    </style>
 
 </resources>
