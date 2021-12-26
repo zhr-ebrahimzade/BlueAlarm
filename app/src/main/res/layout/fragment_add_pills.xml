@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_btn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pill_page_back"
-    tools:context=".AddPillsFragment">
+    tools:context=".Folder.AddPillsFragment">
 
     <EditText
         android:id="@+id/editTextTextPillName"
@@ -72,8 +76,9 @@
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+   <!-- <com.google.android.material.textfield.TextInputLayout-->
+    <EditText
+        android:id="@+id/duration"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="230dp"
         android:layout_height="45dp"
@@ -81,9 +86,9 @@
         android:layout_marginEnd="37dp"
         android:background="@drawable/yellow_rounded_corner_edit_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDay">
+        app:layout_constraintTop_toBottomOf="@+id/textViewDay"/>
 
-        <AutoCompleteTextView
+        <!--<AutoCompleteTextView
             android:id="@+id/autoCompleteDuration"
             android:layout_width="240dp"
             android:layout_height="45dp"
@@ -108,7 +113,7 @@
             android:textColor="@color/text_color"
             android:textSize="17sp" />
     </com.google.android.material.textfield.TextInputLayout>
-
+-->
 
     <TextView
         android:id="@+id/textViewDay"
@@ -226,5 +231,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
+    <Button
+        android:id="@+id/testbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="136dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

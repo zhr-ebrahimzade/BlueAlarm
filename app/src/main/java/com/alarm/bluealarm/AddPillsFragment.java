@@ -14,7 +14,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,16 +29,20 @@ public class AddPillsFragment extends Fragment {
 
 
 
+    EditText pillName;
     TextView showPillsList;
+    Button addButton;
+    CheckBox remind;
+    EditText duration;
+    EditText pillDescription;
 
 
-    String[] duration;
-    AutoCompleteTextView autoCompleteDuration;
-    ArrayAdapter<String> adapterDuration ;
+
 
     String[] color;
     AutoCompleteTextView autoCompleteColor;
     ArrayAdapter<String> adapterColor ;
+    String selectedColor;
 
 
     TextView day;
@@ -78,38 +86,24 @@ public class AddPillsFragment extends Fragment {
 
 
         //Hooks
+        pillDescription=view.findViewById(R.id.descriptionEditText);
+        addButton=view.findViewById(R.id.testbtn);
         showPillsList = view.findViewById(R.id.textViewShowPillsList);
-        autoCompleteDuration = view.findViewById(R.id.autoCompleteDuration);
+        duration=view.findViewById(R.id.duration);
         autoCompleteColor = view.findViewById(R.id.autoCompleteTextViewColor);
         day = view.findViewById(R.id.textViewDay);
         time = view.findViewById(R.id.textViewTime);
+        remind=view.findViewById(R.id.checkBox);
+        pillName=view.findViewById(R.id.editTextTextPillName);
 
 
-
-        //initials
-        duration = getResources().getStringArray(R.array.duration_dropdown);
-        adapterDuration = new ArrayAdapter<String>(getContext(), R.layout.dropdawn_item, duration);
-        autoCompleteDuration.setAdapter(adapterDuration);
+        //initials colors
 
         color = getResources().getStringArray(R.array.color_dropdown);
         adapterColor = new ArrayAdapter<String>(getContext(), R.layout.dropdawn_item, color);
         autoCompleteColor.setAdapter(adapterColor);
 
 
-
-
-
-
-
-
-
-        autoCompleteDuration.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-
-            }
-        });
 
 
         autoCompleteColor.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -127,10 +121,6 @@ public class AddPillsFragment extends Fragment {
 
             }
         });
-
-
-
-
 
 
 
@@ -249,6 +239,27 @@ public class AddPillsFragment extends Fragment {
             }
         });
 
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Pills pills;
+                try {
+                    pills=new Pills(-1,pillName.getText().toString(),selectedColor,day.getText().toString(),time.getText().toString(),
+                            Integer.parseInt(duration.getText().toString()),pillDescription.getText().toString()
+                            ,remind.isChecked());
+
+                }catch (Exception e){
+                   // Toast.makeText(getActivity(),"Error, please check ",Toast.LENGTH_SHORT).show();
+                    pills= new Pills(-1,"NameError","ColorError","DayError",
+                            "TimeError",0,"DescriptionError",false);
+                }
+
+                DataBaseHelper dataBaseHelper=new DataBaseHelper(getActivity());
+                boolean success = dataBaseHelper.addOne(pills);
+                Toast.makeText(getActivity(),"Success = "+success, Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
