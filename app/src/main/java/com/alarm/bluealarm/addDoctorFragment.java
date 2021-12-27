@@ -15,9 +15,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -27,6 +31,10 @@ import java.util.Calendar;
  */
 public class addDoctorFragment extends Fragment {
 
+    EditText speciality;
+    EditText doctor_name;
+    Button done;
+    Switch drReminding;
     TextView time;
     int timeHour, timeMinute;
 
@@ -40,6 +48,11 @@ public class addDoctorFragment extends Fragment {
         //Assign variable
         time = view.findViewById(R.id.textViewTimer);
         dateTextView = view.findViewById(R.id.textViewDate);
+        done=view.findViewById(R.id.done_btn);
+        doctor_name=view.findViewById(R.id.editTextDoctorName);
+        speciality=view.findViewById(R.id.editTextSpeciality);
+        drReminding=view.findViewById(R.id.drReminding);
+
 
         //Time picker dialog
         time.setOnClickListener(new View.OnClickListener() {
@@ -103,9 +116,28 @@ public class addDoctorFragment extends Fragment {
         });
 
 
+             done.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+                     Doctors doctors;
+                     try {
+                         doctors = new Doctors(-1, doctor_name.getText().toString(), speciality.getText().toString()
+                                 , drReminding.isChecked(), dateTextView.getText().toString(), time.getText().toString());
+
+                     } catch (Exception e) {
+                         Toast.makeText(getActivity(), "EMPTY ", Toast.LENGTH_SHORT).show();
+                         doctors = new Doctors(-1, "NameError", "SpecialityError", false,
+                                 "NotSet", "NotSet");
+                     }
+
+                     DataBaseHelper dataBaseHelper = new DataBaseHelper(getActivity());
+                     boolean success = dataBaseHelper.addTwo(doctors);
 
 
-
-        return  view;
+                 }
+             });
+     return view;
     }
+
+
 }

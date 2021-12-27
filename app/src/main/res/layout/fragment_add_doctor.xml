@@ -56,7 +56,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Switch
-            android:id="@+id/switch2"
+            android:id="@+id/drReminding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -91,9 +91,9 @@
             android:text="Time"
             android:textColor="@color/text_color"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintBottom_toTopOf="@+id/done_btn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch2"
+            app:layout_constraintTop_toBottomOf="@+id/drReminding"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -112,13 +112,13 @@
             android:text="Date"
             android:textColor="@color/text_color"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintBottom_toTopOf="@+id/done_btn"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch2"
+            app:layout_constraintTop_toBottomOf="@+id/drReminding"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/done_btn"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:layout_marginTop="104dp"
@@ -131,7 +131,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch2" />
+            app:layout_constraintTop_toBottomOf="@+id/drReminding" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -3,14 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="25dp"
-    android:layout_marginTop="25dp"
-    android:layout_marginEnd="15dp"
-    android:layout_marginBottom="25dp"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     >
 
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="25dp"
+        >
     <TextView
         android:id="@+id/textViewPillName"
         android:layout_width="220dp"
@@ -51,5 +55,5 @@
         app:iconPadding="10dp"
         app:iconTint="@color/btn_color" />
 
-
+    </LinearLayout>
 </LinearLayout>

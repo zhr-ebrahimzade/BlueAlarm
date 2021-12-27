@@ -22,22 +22,35 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_PILL_DURATION = "PILL_DURATION";
     public static final String COLUMN_PILL_DESCRIPTION = "PILL_DESCRIPTION";
     public static final String COLUMN_PILL_REMINDING = "PILL_REMINDING";
+    //table for doctors
+    public static final String DOCTOR_TABLE = "DOCTOR_TABLE";
+    public static final String COLUMN_DOCTOR_ID = "ID";
+    public static final String COLUMN_DOCTOR_NAME = "DOCTOR_NAME";
+    public static final String COLUMN_DOCTOR_SPECIALITY = "DOCTOR_SPECIALITY";
+    public static final String COLUMN_DOCTOR_REMINDING = "DOCTOR_REMINDING";
+    public static final String COLUMN_DOCTOR_DATE = "DOCTOR_DATE";
+    public static final String COLUMN_DOCTOR_TIME = "DOCTOR_TIME";
+
 
     public DataBaseHelper(@Nullable Context context) {
         super(context, "blue_alarm.db", null, 1);
     }
 
+    // table create statements
+    String createTableStatement= "CREATE TABLE " + PILL_TABLE + " " +
+            "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_PILL_NAME + " TEXT, " + COLUMN_PILL_COLOR + " TEXT, " + COLUMN_PILL_DAY + " TEXT" +
+            "," + COLUMN_PILL_TIME + " INTEGER, " + COLUMN_PILL_DURATION + " INTEGER, " + COLUMN_PILL_DESCRIPTION + " TEXT, " + COLUMN_PILL_REMINDING + " INTEGER)";
+    String createDoctorsTableStatement= "CREATE TABLE " + DOCTOR_TABLE + " (" + COLUMN_DOCTOR_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_DOCTOR_NAME + " TEXT, " + COLUMN_DOCTOR_SPECIALITY + " TEXT, " + COLUMN_DOCTOR_REMINDING + " BOOL, " + COLUMN_DOCTOR_DATE + " TEXT, " + COLUMN_DOCTOR_TIME + " TEXT)";
 
     //this is called the first time a database is accessed.
     // There should be code here to create a new database.
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement= "CREATE TABLE " + PILL_TABLE + " " +
-                "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_PILL_NAME + " TEXT, " + COLUMN_PILL_COLOR + " TEXT, " + COLUMN_PILL_DAY + " TEXT" +
-                "," + COLUMN_PILL_TIME + " INTEGER, " + COLUMN_PILL_DURATION + " INTEGER, " + COLUMN_PILL_DESCRIPTION + " TEXT, " + COLUMN_PILL_REMINDING + " INTEGER)";
-        db.execSQL(createTableStatement);
 
+        //creating required Tables
+        db.execSQL(createTableStatement);
+        db.execSQL(createDoctorsTableStatement);
     }
 
 
@@ -46,7 +59,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS "+PILL_TABLE);
+        db.execSQL("DROP TABLE IF EXISTS "+DOCTOR_TABLE);
+        onCreate(db);
     }
 
     public boolean addOne(Pills pills){
@@ -68,6 +83,36 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             return true;
 
     }
+
+    public boolean addTwo(Doctors doctors) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COLUMN_DOCTOR_NAME, doctors.getDrName());
+        cv.put(COLUMN_DOCTOR_SPECIALITY, doctors.getDrSpeciality());
+        cv.put(COLUMN_DOCTOR_REMINDING, doctors.isReminder());
+        cv.put(COLUMN_DOCTOR_TIME, doctors.getDrTime());
+        cv.put(COLUMN_DOCTOR_DATE, doctors.getDrDate());
+
+        long insert = db.insert(DOCTOR_TABLE, null, cv);
+        if (insert == -1)
+            return false;
+        else
+            return true;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     public List<Pills> getEveryPill(){
         List<Pills> returnList=new ArrayList<>();
 
