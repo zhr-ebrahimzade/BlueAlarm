@@ -28,8 +28,10 @@
         <item name="colorControlActivated">#031544</item>
 <!--        inactive-->
         <item name="colorSwitchThumbNormal">@color/gray</item>
+    </style>
 
-
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/yellow_FFC</item>
     </style>
 
 </resources>

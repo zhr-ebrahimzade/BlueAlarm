@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlueAlarm">
         <activity
+            android:name=".PillsList"
+            android:exported="true" />
+        <activity
             android:name=".AddPillsPage"
             android:exported="true" />
         <activity

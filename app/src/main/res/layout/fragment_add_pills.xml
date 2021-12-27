@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="match_parent"
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/add_btn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,7 +15,7 @@
         android:id="@+id/editTextTextPillName"
         android:layout_width="340dp"
         android:layout_height="55dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/yellow_rounded_corner_edit_text"
         android:ems="10"
         android:fontFamily="@font/segoeuibold"
@@ -61,7 +61,7 @@
         android:id="@+id/descriptionEditText"
         android:layout_width="340dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="264dp"
+        android:layout_marginBottom="310dp"
         android:background="@drawable/yellow_rounded_corner_edit_text"
         android:drawableEnd="@drawable/pill"
         android:ems="10"
@@ -82,11 +82,11 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="230dp"
         android:layout_height="45dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="37dp"
         android:background="@drawable/yellow_rounded_corner_edit_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDay"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewDay" />
 
         <!--<AutoCompleteTextView
             android:id="@+id/autoCompleteDuration"
@@ -120,7 +120,7 @@
         android:layout_width="230dp"
         android:layout_height="45dp"
         android:layout_marginStart="145dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="36dp"
         android:background="@drawable/yellow_rounded_corner_edit_text"
         android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
@@ -141,7 +141,7 @@
         android:layout_width="100dp"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/yellow_rounded_corner_edit_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPillName">
@@ -171,7 +171,7 @@
         android:layout_width="100dp"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="9dp"
         android:background="@drawable/yellow_rounded_corner_edit_text"
         android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
@@ -190,7 +190,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/yellow_rounded_corner_edit_text"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -213,14 +213,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:checked="false" />
+            android:buttonTint="@color/btn_color"
+            android:checked="true" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textViewShowPillsList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="30dp"
         android:drawableLeft="@drawable/ic_layer_2"
         android:drawablePadding="10dp"
         android:fontFamily="@font/segoeuibold"
@@ -235,11 +236,14 @@
         android:id="@+id/testbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="136dp"
-        android:text="Button"
+        android:layout_marginBottom="112dp"
+        android:backgroundTint="@color/btn_color"
+        android:text="done"
+        android:textColor="@color/yellow_FFC"
+        app:cornerRadius="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
 

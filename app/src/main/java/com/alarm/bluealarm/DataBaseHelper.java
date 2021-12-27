@@ -2,10 +2,14 @@ package com.alarm.bluealarm;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 
@@ -63,5 +67,39 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         else
             return true;
 
+    }
+    public List<Pills> getEveryPill(){
+        List<Pills> returnList=new ArrayList<>();
+
+        //get data from database
+        String queryString= "SELECT * FROM "+ PILL_TABLE;
+        SQLiteDatabase db=this.getReadableDatabase(); //I only want to read, not write
+        Cursor cursor = db.rawQuery(queryString,null);
+        if (cursor.moveToFirst()){
+            //loop through the cursor (result set) and create new Pills obj. put them into the return list.
+            do {
+                int pill_id=cursor.getInt(0);
+                String pill_name=cursor.getString(1);
+                String pill_color=cursor.getString(2);
+                String pill_day=cursor.getString(3);
+                String pill_time=cursor.getString(4);
+                int pill_duration=cursor.getInt(5);
+                String pill_description=cursor.getString(6);
+                boolean alarmed=cursor.getInt(7) == 1;
+                Pills pillsList=new Pills(pill_id,pill_name,pill_color,pill_day,pill_time,
+                        pill_duration,pill_description,alarmed);
+                returnList.add(pillsList);
+
+            }while (cursor.moveToNext()); // as long as there is new lines.
+
+
+        }else {
+            //failure. do not add anything to the list.
+        }
+        //close the cursor and the database when done.
+        cursor.close();
+        db.close();
+
+        return returnList;
     }
 }

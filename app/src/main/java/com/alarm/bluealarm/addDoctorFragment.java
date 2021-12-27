@@ -1,15 +1,25 @@
 package com.alarm.bluealarm;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.DatePicker;
+import android.widget.TextView;
+import android.widget.TimePicker;
+
+import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,36 +27,81 @@ import android.widget.AutoCompleteTextView;
  */
 public class addDoctorFragment extends Fragment {
 
-    String[] time;
-    AutoCompleteTextView autoCompleteTime;
-    ArrayAdapter<String> adapterTime ;
+    TextView time;
+    int timeHour, timeMinute;
 
+    TextView dateTextView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_add_doctor, container, false);
 
+        //Assign variable
+        time = view.findViewById(R.id.textViewTimer);
+        dateTextView = view.findViewById(R.id.textViewDate);
 
-
-
-        autoCompleteTime = view.findViewById(R.id.autoCompleteTextViewTime);
-        time = getResources().getStringArray(R.array.doctor_time);
-        adapterTime = new ArrayAdapter<String>(getContext(), R.layout.dropdawn_item, time);
-        autoCompleteTime.setAdapter(adapterTime);
-
-
-
-
-
-
-        autoCompleteTime.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //Time picker dialog
+        time.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onClick(View view) {
+                 //Initialize time picker dialog
+                TimePickerDialog timePickerDialog = new TimePickerDialog(view.getContext(),R.style.TimePickerTheme, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                        //Initilaze hour and minute
+                        timeHour = i;
+                        timeMinute = i1;
 
+                        //Initialize calender
+                        Calendar calendar = Calendar.getInstance();
+
+                        //set hour and minute
+                        calendar.set(0, 0, 0, timeHour, timeMinute);
+
+                        //set selected time on text view
+                        time.setText(DateFormat.format("hh:mm aa", calendar));
+
+                    }
+                }, 12, 0, false
+                );
+
+                //Display prev selected time
+                timePickerDialog.updateTime(timeHour, timeMinute);
+                //show dialog
+                timePickerDialog.show();
 
             }
         });
+
+
+
+
+
+        Calendar calendar = Calendar.getInstance();
+        final int year = calendar.get(calendar.YEAR);
+        final int month = calendar.get(calendar.MONTH);
+        final int day = calendar.get(calendar.DAY_OF_MONTH);
+
+        dateTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(view.getContext(),R.style.TimePickerTheme, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+                        i1 = month+1;
+                        String date = i + "/"+ i1 + "/" + i2;
+                        dateTextView.setText(date);
+                    }
+                }
+                ,year , month, day
+                );
+
+//                datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                datePickerDialog.show();
+            }
+        });
+
 
 
 
