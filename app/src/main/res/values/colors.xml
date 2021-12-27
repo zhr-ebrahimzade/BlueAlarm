@@ -23,4 +23,5 @@
     <color name="add_record_back">#1AA2D6F9</color>
     <color name="pill_page_back">#dee3e7</color>
     <color name="text_color">#b3b8c7</color>
+    <color name="inner_shadow_color">#d5d6d6</color>
 </resources>

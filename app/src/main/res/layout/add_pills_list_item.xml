@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="25dp"
+    android:layout_marginTop="25dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginBottom="25dp"
+    android:orientation="horizontal"
+    >
+
+
+    <TextView
+        android:id="@+id/textViewPillName"
+        android:layout_width="220dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:background="@drawable/blue_rounded_corner_edittext"
+        android:drawableStart="@drawable/ic_outline_circle_filled_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/segoeuibold"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="test"
+        android:textColor="@color/btn_color"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/editbtn"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/white"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_page_1"
+        app:iconPadding="10dp"
+        app:iconTint="@color/btn_color" />
+
+    <Button
+        android:id="@+id/deletebtn"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/white"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_recyclerbin"
+        app:iconPadding="10dp"
+        app:iconTint="@color/btn_color" />
+
+
+</LinearLayout>
