@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PillsListFragment extends Fragment {
     RecyclerView recyclerPillsList;
@@ -25,13 +26,16 @@ public class PillsListFragment extends Fragment {
 
        recyclerPillsList = view.findViewById(R.id.recyclerPillsList);
 
-       test = new ArrayList<String>();
+       /*test = new ArrayList<String>();
 
        for(int i = 0; i<10; i++){
            test.add(i+"*Test");
        }
+*/
+        DataBaseHelper dataBaseHelper=new DataBaseHelper(getActivity());
+        List<Pills> everyPill=dataBaseHelper.getEveryPill();
 
-       PillsListAdapter pillsListAdapter = new PillsListAdapter(getContext(), test);
+       PillsListAdapter pillsListAdapter = new PillsListAdapter(getContext(),everyPill);
        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
        recyclerPillsList.setLayoutManager(linearLayoutManager);
        recyclerPillsList.setAdapter(pillsListAdapter);

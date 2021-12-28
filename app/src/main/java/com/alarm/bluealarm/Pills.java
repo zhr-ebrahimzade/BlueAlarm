@@ -26,6 +26,9 @@ public class Pills {
 
         public Pills() {
         }
+    public Pills(String pillName){
+        this.pillName=pillName;
+    }
 
         //toString is very necessary for printing the contents of a class
 

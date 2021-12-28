@@ -30,9 +30,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_DOCTOR_REMINDING = "DOCTOR_REMINDING";
     public static final String COLUMN_DOCTOR_DATE = "DOCTOR_DATE";
     public static final String COLUMN_DOCTOR_TIME = "DOCTOR_TIME";
-    public static final String TABEL_ALAKI = "TABEL_ALAKI";
-    private static final String ALAKI_ID ="ID" ;
-    private static final String ALAKI_NAME = "NAME" ;
+
 
 
     public DataBaseHelper(@Nullable Context context) {
@@ -131,15 +129,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             //loop through the cursor (result set) and create new Pills obj. put them into the return list.
             do {
                 int pill_id=cursor.getInt(0);
-                String pill_name=cursor.getString(1);
+                String pill_name=cursor. getString(1);
                 String pill_color=cursor.getString(2);
                 String pill_day=cursor.getString(3);
                 String pill_time=cursor.getString(4);
                 int pill_duration=cursor.getInt(5);
                 String pill_description=cursor.getString(6);
                 boolean alarmed=cursor.getInt(7) == 1;
-                Pills pillsList=new Pills(pill_id,pill_name,pill_color,pill_day,pill_time,
-                        pill_duration,pill_description,alarmed);
+                Pills pillsList=new Pills(pill_id,pill_name,pill_color,pill_day,pill_time,pill_duration,pill_description,alarmed);
                 returnList.add(pillsList);
 
             }while (cursor.moveToNext()); // as long as there is new lines.

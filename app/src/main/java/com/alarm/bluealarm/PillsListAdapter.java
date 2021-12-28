@@ -12,13 +12,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PillsListAdapter extends RecyclerView.Adapter {
     Context context;
-    ArrayList<String> pillNameArrayList;
+    List<Pills> pillNameArrayList;
 
 
-    public PillsListAdapter(Context context, ArrayList pillNameArrayList){
+    public PillsListAdapter(Context context, List<Pills> pillNameArrayList){
         this.pillNameArrayList = pillNameArrayList;
         this.context = context;
     }
