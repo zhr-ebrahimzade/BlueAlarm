@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pill_page_back"
     tools:context=".PillsListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerPillsList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="80dp" />
 </FrameLayout>

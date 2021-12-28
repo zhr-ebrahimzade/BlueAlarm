@@ -30,10 +30,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_DOCTOR_REMINDING = "DOCTOR_REMINDING";
     public static final String COLUMN_DOCTOR_DATE = "DOCTOR_DATE";
     public static final String COLUMN_DOCTOR_TIME = "DOCTOR_TIME";
+    public static final String TABEL_ALAKI = "TABEL_ALAKI";
+    private static final String ALAKI_ID ="ID" ;
+    private static final String ALAKI_NAME = "NAME" ;
 
 
     public DataBaseHelper(@Nullable Context context) {
         super(context, "blue_alarm.db", null, 1);
+
     }
 
     // table create statements
@@ -49,8 +53,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         //creating required Tables
-        db.execSQL(createTableStatement);
+
         db.execSQL(createDoctorsTableStatement);
+        db.execSQL(createTableStatement);
+
     }
 
 
@@ -61,6 +67,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+PILL_TABLE);
         db.execSQL("DROP TABLE IF EXISTS "+DOCTOR_TABLE);
+
         onCreate(db);
     }
 

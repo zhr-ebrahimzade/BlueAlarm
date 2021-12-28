@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity  implements BottomNavigation
             case R.id.doctor_bottom_appbar:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new addDoctorFragment()).commit();
                 return true;
-            case R.id.date_bottom_appbar:
+            case R.id.list_bottom_appbar:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new PillsListFragment()).commit();
                 return true;
             case R.id.placeHolder:

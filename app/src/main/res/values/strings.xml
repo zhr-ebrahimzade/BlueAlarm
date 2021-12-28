@@ -19,7 +19,7 @@
     <string name="main_menu_measurement">Record</string>
     <string name="main_menu_doctor">Doctor</string>
     <string name="main_menu_home">Home</string>
-    <string name="main_menu_date">Date</string>
+    <string name="main_menu_list">List</string>
     <!--<string name="main_menu_measurement">
     <font size="500">Measurements</font><font size="500"> Text in normal font size 10</font>
 </string>
