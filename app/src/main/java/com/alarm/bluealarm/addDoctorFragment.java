@@ -131,7 +131,7 @@ public class addDoctorFragment extends Fragment {
                      }
 
                      DataBaseHelper dataBaseHelper = new DataBaseHelper(getActivity());
-                     boolean success = dataBaseHelper.addTwo(doctors);
+                     boolean success = dataBaseHelper.addOneDoctor(doctors);
                      Toast.makeText(getActivity(),"Success = "+success, Toast.LENGTH_SHORT).show();
 
 

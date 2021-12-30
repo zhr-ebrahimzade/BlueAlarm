@@ -30,11 +30,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_DOCTOR_REMINDING = "DOCTOR_REMINDING";
     public static final String COLUMN_DOCTOR_DATE = "DOCTOR_DATE";
     public static final String COLUMN_DOCTOR_TIME = "DOCTOR_TIME";
+    //table for records
+    public static final String RECORD_TABLE = "RECORD_TABLE";
+    public static final String COLUMN_RECORD_ID = "RECORD_ID";
+    public static final String COLUMN_SYS = "SYS";
+    public static final String COLUMN_DYA = "DYA";
+    public static final String COLUMN_PLU = "PLU";
+    public static final String COLUMN_FBS = "FBS";
 
 
 
     public DataBaseHelper(@Nullable Context context) {
-        super(context, "blue_alarm.db", null, 1);
+        super(context, "blue_alarm.db", null, 2);
 
     }
 
@@ -42,7 +49,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     String createTableStatement= "CREATE TABLE " + PILL_TABLE + " " +
             "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_PILL_NAME + " TEXT, " + COLUMN_PILL_COLOR + " TEXT, " + COLUMN_PILL_DAY + " TEXT" +
             "," + COLUMN_PILL_TIME + " INTEGER, " + COLUMN_PILL_DURATION + " INTEGER, " + COLUMN_PILL_DESCRIPTION + " TEXT, " + COLUMN_PILL_REMINDING + " INTEGER)";
+
     String createDoctorsTableStatement= "CREATE TABLE " + DOCTOR_TABLE + " (" + COLUMN_DOCTOR_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_DOCTOR_NAME + " TEXT, " + COLUMN_DOCTOR_SPECIALITY + " TEXT, " + COLUMN_DOCTOR_REMINDING + " BOOL, " + COLUMN_DOCTOR_DATE + " TEXT, " + COLUMN_DOCTOR_TIME + " TEXT)";
+
+    String createRecordTable= "CREATE TABLE " + RECORD_TABLE + " (" + COLUMN_RECORD_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_SYS + " INTEGER, " + COLUMN_DYA + " INTEGER, " + COLUMN_PLU + " INTEGER, " + COLUMN_FBS + " INTEGER)";
 
     //this is called the first time a database is accessed.
     // There should be code here to create a new database.
@@ -54,6 +64,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(createDoctorsTableStatement);
         db.execSQL(createTableStatement);
+        db.execSQL(createRecordTable);
 
     }
 
@@ -65,11 +76,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+PILL_TABLE);
         db.execSQL("DROP TABLE IF EXISTS "+DOCTOR_TABLE);
+        db.execSQL("DROP TABLE IF EXISTS "+RECORD_TABLE);
 
         onCreate(db);
     }
 
-    public boolean addOne(Pills pills){
+    public boolean addOnePill(Pills pills){
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
 
@@ -89,7 +101,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean addTwo(Doctors doctors) {
+    public boolean addOneDoctor(Doctors doctors) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
@@ -100,6 +112,25 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_DOCTOR_DATE, doctors.getDrDate());
 
         long insert = db.insert(DOCTOR_TABLE, null, cv);
+        if (insert == -1)
+            return false;
+        else
+            return true;
+
+    }
+
+    public boolean addOneRecord(Records records) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COLUMN_SYS, records.getSys());
+        cv.put(COLUMN_DYA, records.getDya());
+        cv.put(COLUMN_PLU, records.getPlu());
+        cv.put(COLUMN_FBS, records.getFbs());
+
+
+
+        long insert = db.insert(RECORD_TABLE, null, cv);
         if (insert == -1)
             return false;
         else

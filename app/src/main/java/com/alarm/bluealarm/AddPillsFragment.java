@@ -258,7 +258,7 @@ public class AddPillsFragment extends Fragment {
                 }
 
                 DataBaseHelper dataBaseHelper=new DataBaseHelper(getActivity());
-                boolean success = dataBaseHelper.addOne(pills);
+                boolean success = dataBaseHelper.addOnePill(pills);
                 Toast.makeText(getActivity(),"Success = "+success, Toast.LENGTH_SHORT).show();
             }
         });

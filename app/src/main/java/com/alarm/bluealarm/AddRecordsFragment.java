@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AddRecordsFragment extends Fragment {
 
@@ -90,21 +91,23 @@ done.setOnClickListener(new View.OnClickListener() {
             dya.setError("Please set this item");
         }
 
+        Records records;
+        try {
+            records=new Records(Integer.parseInt(SYS),Integer.parseInt(DYA),Integer.parseInt(PLU),Integer.parseInt(FBS));
+        }catch (Exception e){
+            records=new Records(0,0,0,0);
+        }
+
+        DataBaseHelper dataBaseHelper= new DataBaseHelper(getActivity());
+        boolean success=dataBaseHelper.addOneRecord(records);
+
+        Toast.makeText(getActivity(),"Success: "+success, Toast.LENGTH_SHORT).show();
+
+
     }
 });
 
-
-
-
-
-
-
-
         return view;
-
-
-
-
 
     }
 }
