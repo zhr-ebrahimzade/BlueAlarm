@@ -19,8 +19,6 @@ public class AddRecordsFragment extends Fragment {
 
     EditText sys , fbs , dya , plu;
     Button listbtn , done;
-   // ImageView pulse;
-   // TextView newrecord , SYS, FBS , DYA , PLU ;
     String SYS , FBS , DYA , PLU;
 
 
@@ -44,34 +42,6 @@ public class AddRecordsFragment extends Fragment {
 
 
 
-  /* sys.setOnClickListener(new View.OnClickListener() {
-       @Override
-       public void onClick(View view) {
-           SYS = sys.getText().toString();
-       }
-   });
-
-   fbs.setOnClickListener(new View.OnClickListener() {
-       @Override
-       public void onClick(View view) {
-           FBS = fbs.getText().toString();
-       }
-   });
-
-   dya.setOnClickListener(new View.OnClickListener() {
-       @Override
-       public void onClick(View view) {
-           DYA = dya.getText().toString();
-       }
-   });
-
-plu.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        PLU = plu.getText().toString();
-    }
-});
-*/
 done.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -80,16 +50,27 @@ done.setOnClickListener(new View.OnClickListener() {
         PLU = plu.getText().toString();
         FBS = fbs.getText().toString();
 
-        if (sys == null && fbs == null && dya == null && plu == null){
+        if (SYS.equals("") && DYA.equals("") && PLU.equals("") && FBS.equals("")){
+           /* sys.setError("Please fill this field");
+            dya.setError("Please fill this field");
+            plu.setError("Please fill this field");
+            fbs.setError("Please fill this field");
+
+            */
+            Toast.makeText(getActivity() , "Fields are empty" , Toast.LENGTH_SHORT).show();
+        }
+        if (SYS.equals("") && !DYA.equals("")){
+            sys.setError("Please fill this field");
+        }
+        if (DYA.equals("") && !SYS.equals("")){
+            dya.setError("Please fill this field");
+        }
+        else {
+            Toast.makeText(getActivity(), "Records added" , Toast.LENGTH_SHORT).show();
+        }
 
 
-        }
-        if (sys == null && dya != null){
-            sys.setError("Please set this item");
-        }
-        if (dya == null && sys != null){
-            dya.setError("Please set this item");
-        }
+
 
         Records records;
         try {
@@ -101,7 +82,7 @@ done.setOnClickListener(new View.OnClickListener() {
         DataBaseHelper dataBaseHelper= new DataBaseHelper(getActivity());
         boolean success=dataBaseHelper.addOneRecord(records);
 
-        Toast.makeText(getActivity(),"Success: "+success, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(),"Success: "+success, Toast.LENGTH_SHORT).show();
 
 
     }

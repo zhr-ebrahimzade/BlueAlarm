@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/add_record_back"
+    android:background="@color/pill_page_back"
     tools:context=".AddRecordsFragment">
 
     <TextView
@@ -15,6 +15,7 @@
         android:text="New Record"
         android:textColor="@color/btn_color"
         android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.35"
@@ -30,6 +31,7 @@
         android:ems="10"
         android:inputType="number"
         android:paddingStart="12dp"
+        android:paddingEnd="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.246"
@@ -46,6 +48,7 @@
         android:ems="10"
         android:inputType="number"
         android:paddingStart="12dp"
+        android:paddingEnd="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.890"
@@ -58,15 +61,17 @@
         android:id="@+id/dya"
         android:layout_width="95dp"
         android:layout_height="45dp"
-        android:layout_marginTop="169dp"
         android:background="@drawable/yellow_rounded_corner_edit_text"
         android:ems="10"
         android:inputType="number"
         android:paddingStart="12dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.890"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
@@ -77,6 +82,7 @@
         android:ems="10"
         android:inputType="number"
         android:paddingStart="12dp"
+        android:paddingEnd="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.246"
@@ -93,6 +99,7 @@
         android:text="SYS"
         android:textColor="@color/btn_color"
         android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
@@ -108,6 +115,7 @@
         android:text="DYA"
         android:textColor="@color/btn_color"
         android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
@@ -123,6 +131,7 @@
         android:text="PLU"
         android:textColor="@color/btn_color"
         android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
@@ -138,6 +147,7 @@
         android:text="FBS"
         android:textColor="@color/btn_color"
         android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
@@ -157,23 +167,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.08" />
 
+
     <Button
         android:id="@+id/done"
-        android:layout_width="105dp"
-        android:layout_height="57dp"
+        android:layout_width="98dp"
+        android:layout_height="52dp"
         android:backgroundTint="@color/btn_color"
         android:text="done"
-        android:textAllCaps="false"
+        android:textAllCaps="true"
         android:textColor="@color/yellow_FFC"
-        android:textSize="19sp"
-        app:cornerRadius="20dp"
+        android:textSize="16sp"
+        app:cornerRadius="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.71" />
-
+        app:layout_constraintVertical_bias="0.673" />
 
     <Button
         android:id="@+id/listbtn"
@@ -184,14 +194,15 @@
         android:drawableLeft="@drawable/list"
         android:drawablePadding="20dp"
         android:fontFamily="@font/segoeuibold"
-        android:text="show previous records"
+        android:text="Show records list"
         android:textAllCaps="false"
         android:textColor="@color/btn_color"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.820" />
+        app:layout_constraintVertical_bias="0.788" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

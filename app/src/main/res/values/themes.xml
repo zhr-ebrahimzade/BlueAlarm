@@ -31,6 +31,7 @@
     </style>
 
     <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorOnPrimary">@color/yellow_FFC</item>
         <item name="colorAccent">@color/yellow_FFC</item>
     </style>
 

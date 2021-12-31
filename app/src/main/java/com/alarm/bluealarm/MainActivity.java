@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -27,8 +28,9 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity  implements BottomNavigationView.OnNavigationItemSelectedListener{
-//     implements NavigationView.OnNavigationItemSelectedListener
+public class MainActivity extends AppCompatActivity   {
+    //implements BottomNavigationView.OnNavigationItemSelectedListener
+    //     implements NavigationView.OnNavigationItemSelectedListener
     //variables
     private MenuItem logoutBtn;
     private DrawerLayout drawerLayout;
@@ -40,13 +42,12 @@ public class MainActivity extends AppCompatActivity  implements BottomNavigation
     private FloatingActionButton floatingActionButton;
 
 
-    FirebaseAuth firebaseAuth ;
+    FirebaseAuth firebaseAuth;
 
 
     //fragment initialise
-//    FragmentManager fragmentManager = getSupportFragmentManager();
-//    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
+    //FragmentManager fragmentManager = getSupportFragmentManager();
+    //FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
 
     @Override
@@ -64,11 +65,18 @@ public class MainActivity extends AppCompatActivity  implements BottomNavigation
         bottomAppBar = findViewById(R.id.bottomAppBar);
         floatingActionButton = findViewById(R.id.fabBtn);
 
+        MainViewFragment mainviewfragment = new MainViewFragment();
+        AddPillsFragment addpillsfragment = new AddPillsFragment();
+        addDoctorFragment adddoctorfragment = new addDoctorFragment();
+        PillsListFragment pillslistfragment = new PillsListFragment();
+        AddRecordsFragment addrecordsfragment = new AddRecordsFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerView , mainviewfragment).commit();
+
         //Bottom Nav View
         bottomNavigationView.setBackground(null);
-        Menu menu = bottomNavigationView.getMenu();
+        //Menu menu = bottomNavigationView.getMenu();
 //        bottomNavigationView.getMenu().getItem(2).isEnabled(false);
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        //bottomNavigationView.setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.home_bottom_appbar);
 
         //Toolbar
@@ -79,7 +87,8 @@ public class MainActivity extends AppCompatActivity  implements BottomNavigation
         navigationView.bringToFront();
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.nav_close, R.string.nav_open);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();;
+        actionBarDrawerToggle.syncState();
+        ;
 
         navigationView.setCheckedItem(R.id.homeItem);
 
@@ -87,7 +96,7 @@ public class MainActivity extends AppCompatActivity  implements BottomNavigation
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.homeItem:
                         break;
                     case R.id.settingItem:
@@ -114,9 +123,9 @@ public class MainActivity extends AppCompatActivity  implements BottomNavigation
 
                 }
                 drawerLayout.closeDrawer(GravityCompat.START);
-                return true;            }
+                return true;
+            }
         });
-
 
 
 //
@@ -128,52 +137,61 @@ public class MainActivity extends AppCompatActivity  implements BottomNavigation
 //        });
 
 
-
-
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerView, new AddPillsFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, addpillsfragment).commit();
             }
         });
 
 
-    }
 
 
+bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
     @Override
-    public void onBackPressed() {
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
-            drawerLayout.closeDrawer(GravityCompat.START);
-        }
-        else{
-        super.onBackPressed();
-        }
-    }
-
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected (@NonNull MenuItem item){
+        Fragment fragment = null;
         switch (item.getItemId()) {
             case R.id.home_bottom_appbar:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new MainViewFragment()).commit();
-                return true;
+                // getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new MainViewFragment()).commit();
+                   //fragmenttransaction.replace(R.id.fragmentContainerView , mainviewfragment).commit();
+                   fragment = mainviewfragment;
+                   break;
             case R.id.measur_bottom_appbar:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new AddRecordsFragment()).commit();
-                return true;
+                // getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new AddRecordsFragment()).commit();
+                fragment = addrecordsfragment;
 
+                   //fragmenttransaction.replace(R.id.fragmentContainerView , addrecordsfragment ).commit();
+                   break;
             case R.id.doctor_bottom_appbar:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new addDoctorFragment()).commit();
-                return true;
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new addDoctorFragment()).commit();
+fragment = adddoctorfragment;
+                //fragmenttransaction.replace(R.id.fragmentContainerView , adddoctorfragment ).commit();
+                break;
             case R.id.list_bottom_appbar:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new PillsListFragment()).commit();
-                return true;
-            case R.id.placeHolder:
-                return false;
+                // getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new PillsListFragment()).commit();
+fragment = pillslistfragment;
+                //fragmenttransaction.replace(R.id.fragmentContainerView , pillslistfragment ).commit();
+                break;
+            //case R.id.placeHolder:
+                //return false;
         }
-        return false;
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView , fragment).commit();
+        return true;
+
     }
+
+});
+
+    }
+    @Override
+    public void onBackPressed () {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
 }
-
-

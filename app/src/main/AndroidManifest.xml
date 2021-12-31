@@ -14,7 +14,8 @@
             android:exported="true" />
         <activity
             android:name=".auth.Login"
-            android:parentActivityName=".auth.Welcome">
+            android:parentActivityName=".auth.Welcome"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +24,8 @@
         </activity>
         <activity
             android:name=".auth.Confirmation"
-            android:parentActivityName=".auth.Login">
+            android:parentActivityName=".auth.Login"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,21 +34,24 @@
         </activity>
         <activity
             android:name=".auth.SignUp"
-            android:parentActivityName=".auth.Welcome">
+            android:parentActivityName=".auth.Welcome"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.ALTERNATIVE" />
             </intent-filter>
         </activity>
-        <activity android:name=".auth.Welcome">
+        <activity android:name=".auth.Welcome"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
