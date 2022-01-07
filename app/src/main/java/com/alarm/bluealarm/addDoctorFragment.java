@@ -33,7 +33,7 @@ public class addDoctorFragment extends Fragment {
 
     EditText speciality;
     EditText doctor_name;
-    Button done;
+    Button done , doctorslist;
     Switch drReminding;
     TextView time;
     int timeHour, timeMinute;
@@ -52,6 +52,9 @@ public class addDoctorFragment extends Fragment {
         doctor_name=view.findViewById(R.id.editTextDoctorName);
         speciality=view.findViewById(R.id.editTextSpeciality);
         drReminding=view.findViewById(R.id.drReminding);
+        doctorslist = view.findViewById(R.id.doclistbtn);
+
+        DoctorsListFragment doctorsListFragment = new DoctorsListFragment();
 
 
         //Time picker dialog
@@ -137,6 +140,14 @@ public class addDoctorFragment extends Fragment {
 
                  }
              });
+
+             doctorslist.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View view) {
+                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, doctorsListFragment).commit();
+                 }
+             });
+
      return view;
     }
 

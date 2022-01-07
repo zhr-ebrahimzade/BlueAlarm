@@ -90,15 +90,16 @@ public class MainActivity extends AppCompatActivity   {
         actionBarDrawerToggle.syncState();
         ;
 
-        navigationView.setCheckedItem(R.id.homeItem);
+        //navigationView.setCheckedItem(R.id.homeItem);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()) {
-                    case R.id.homeItem:
+                    /*case R.id.homeItem:
                         break;
+                     */
                     case R.id.settingItem:
                         break;
                     case R.id.shareItem:

@@ -94,6 +94,7 @@ public class AddPillsFragment extends Fragment {
         remind=view.findViewById(R.id.checkBox);
         pillName=view.findViewById(R.id.editTextTextPillName);
 
+        PillsListFragment pillsListFragment = new PillsListFragment();
 
         //initials colors
 
@@ -116,7 +117,7 @@ public class AddPillsFragment extends Fragment {
         showPillsList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new PillsListFragment()).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, pillsListFragment).commit();
 
             }
         });

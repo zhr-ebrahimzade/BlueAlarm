@@ -136,10 +136,13 @@
             app:layout_constraintTop_toBottomOf="@+id/drReminding" />
 
         <Button
-            android:id="@+id/button"
+
+            android:id="@+id/doclistbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00A2D6F9"
+            android:drawableLeft="@drawable/list"
+            android:drawablePadding="20dp"
             android:fontFamily="@font/segoeuibold"
             android:text="Show doctors list"
             android:textAllCaps="false"
@@ -147,10 +150,11 @@
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.817" />
+            app:layout_constraintVertical_bias="0.82" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

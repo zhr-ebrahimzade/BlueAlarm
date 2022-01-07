@@ -18,13 +18,8 @@ import android.widget.Toast;
 public class AddRecordsFragment extends Fragment {
 
     EditText sys , fbs , dya , plu;
-    Button listbtn , done;
+    Button recordslistbtn , done;
     String SYS , FBS , DYA , PLU;
-
-
-
-
-
 
 
     @Override
@@ -37,8 +32,9 @@ public class AddRecordsFragment extends Fragment {
    fbs = view.findViewById(R.id.fbs);
    dya = view.findViewById(R.id.dya);
    plu = view.findViewById(R.id.plu);
-   listbtn = view.findViewById(R.id.listbtn);
+   recordslistbtn = view.findViewById(R.id.listbtn);
    done = view.findViewById(R.id.done);
+   RecordsListFragment recordsListFragment = new RecordsListFragment();
 
 
 
@@ -85,6 +81,13 @@ done.setOnClickListener(new View.OnClickListener() {
         //Toast.makeText(getActivity(),"Success: "+success, Toast.LENGTH_SHORT).show();
 
 
+    }
+});
+
+recordslistbtn.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, recordsListFragment ).commit();
     }
 });
 

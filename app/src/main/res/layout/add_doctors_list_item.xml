@@ -13,13 +13,11 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/textViewPillName"
+        android:id="@+id/textViewDoctorsName"
         android:layout_width="220dp"
         android:layout_height="55dp"
         android:layout_weight="1"
         android:background="@drawable/blue_rounded_corner_edittext"
-        android:drawableStart="@drawable/ic_outline_circle_filled_24"
-        android:drawablePadding="10dp"
         android:ems="10"
         android:fontFamily="@font/segoeuibold"
         android:gravity="center_vertical"
@@ -29,7 +27,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/editbtn"
+        android:id="@+id/editbtndoctors"
         android:layout_width="50dp"
         android:layout_height="60dp"
         android:layout_marginLeft="15dp"
@@ -43,7 +41,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/deletebtn"
+        android:id="@+id/deletebtndoctors"
         android:layout_width="50dp"
         android:layout_height="60dp"
         android:layout_weight="1"
