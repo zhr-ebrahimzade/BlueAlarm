@@ -15,11 +15,11 @@ import java.util.ArrayList;
 
 public class RecordsListAdapter extends RecyclerView.Adapter<RecordsListAdapter.ViewHolderClass2> {
 
-    ArrayList<String> RecordsName = new ArrayList<>();
+    ArrayList<String> RecordsDate = new ArrayList<>();
     Context cont;
 
-    public RecordsListAdapter(ArrayList<String> RecordsName, Context cont) {
-        this.RecordsName = RecordsName;
+    public RecordsListAdapter(ArrayList<String> RecordsDate, Context cont) {
+        this.RecordsDate = RecordsDate;
         this.cont = cont;
     }
 
@@ -35,7 +35,7 @@ public class RecordsListAdapter extends RecyclerView.Adapter<RecordsListAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderClass2 viewholderclass2, int i) {
-        viewholderclass2.recordsname.setText(RecordsName.get(i).toString()); //or data.pillName[position]
+        viewholderclass2.recordsdate.setText(RecordsDate.get(i).toString()); //or data.pillName[position]
         viewholderclass2.editbtnrecords.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -53,18 +53,18 @@ public class RecordsListAdapter extends RecyclerView.Adapter<RecordsListAdapter.
 
     @Override
     public int getItemCount() {
-        return RecordsName.size();
+        return RecordsDate.size();
     }
 
     public class ViewHolderClass2 extends RecyclerView.ViewHolder {
         Button editbtnrecords , deletebtnrecords;
-        TextView recordsname;
+        TextView recordsdate;
 
         public ViewHolderClass2(@NonNull View itemView) {
             super(itemView);
             editbtnrecords = itemView.findViewById(R.id.editbtndoctors);
             deletebtnrecords = itemView.findViewById(R.id.deletebtndoctors);
-            recordsname = itemView.findViewById(R.id.textViewRecordName);
+            recordsdate = itemView.findViewById(R.id.textViewRecordsDate);
         }
     }
 }

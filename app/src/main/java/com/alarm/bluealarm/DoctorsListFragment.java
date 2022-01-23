@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class DoctorsListFragment extends Fragment {
     RecyclerView recyclerDoctorsList;
     ArrayList<String> DoctorName = new ArrayList<>();
+    ArrayList <String> Dates = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,7 +24,7 @@ public class DoctorsListFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_doctors_list, container, false);
 
         recyclerDoctorsList = view.findViewById(R.id.recyclerdoctorslist);
-        DoctorsListAdapter doctorslistadapter = new DoctorsListAdapter(DoctorName , getContext());
+        DoctorsListAdapter doctorslistadapter = new DoctorsListAdapter(DoctorName ,Dates, getContext());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerDoctorsList.setLayoutManager(linearLayoutManager);
         recyclerDoctorsList.setAdapter(doctorslistadapter);

@@ -24,6 +24,7 @@
         android:fontFamily="@font/segoeuibold"
         android:gravity="center_vertical"
         android:paddingLeft="15dp"
+        android:singleLine="false"
         android:text="test"
         android:textColor="@color/btn_color"
         android:textSize="20sp" />

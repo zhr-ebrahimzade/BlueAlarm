@@ -14,7 +14,7 @@
 
     <TextView
         android:id="@+id/textViewDoctorsName"
-        android:layout_width="220dp"
+        android:layout_width="165dp"
         android:layout_height="55dp"
         android:layout_weight="1"
         android:background="@drawable/blue_rounded_corner_edittext"
@@ -22,16 +22,30 @@
         android:fontFamily="@font/segoeuibold"
         android:gravity="center_vertical"
         android:paddingLeft="15dp"
+        android:singleLine="false"
         android:text="test"
         android:textColor="@color/btn_color"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewdates"
+        android:layout_width="85dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/blue_rounded_corner_edittext"
+        android:fontFamily="@font/segoeuibold"
+        android:gravity="center"
+        android:singleLine="false"
+        android:text="date" />
 
     <Button
         android:id="@+id/editbtndoctors"
         android:layout_width="50dp"
         android:layout_height="60dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_weight="1"
         android:backgroundTint="@color/white"
         app:cornerRadius="10dp"
@@ -44,11 +58,12 @@
         android:id="@+id/deletebtndoctors"
         android:layout_width="50dp"
         android:layout_height="60dp"
+        android:layout_marginRight="2dp"
         android:layout_weight="1"
         android:backgroundTint="@color/white"
         app:cornerRadius="10dp"
         app:icon="@drawable/ic_recyclerbin"
-        app:iconPadding="10dp"
+        app:iconPadding="5dp"
         app:iconTint="@color/btn_color"
         tools:ignore="SpeakableTextPresentCheck" />
 

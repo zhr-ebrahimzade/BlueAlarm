@@ -17,10 +17,12 @@ import java.util.ArrayList;
 public class DoctorsListAdapter extends RecyclerView.Adapter<DoctorsListAdapter.ViewHolderClass1> {
 
     ArrayList<String> DoctorsName = new ArrayList<>();
+    ArrayList <String> Dates = new ArrayList<>();
     Context ct;
 
-    public DoctorsListAdapter (ArrayList<String> DoctorName, Context ct) {
+    public DoctorsListAdapter (ArrayList<String> DoctorName, ArrayList<String> Dates ,  Context ct) {
         this.DoctorsName = DoctorName;
+        this.Dates = Dates;
         this.ct = ct;
     }
 
@@ -38,6 +40,7 @@ public class DoctorsListAdapter extends RecyclerView.Adapter<DoctorsListAdapter.
     @Override
     public void onBindViewHolder(@NonNull DoctorsListAdapter.ViewHolderClass1 viewholderclass1, int i) {
         viewholderclass1.doctorname.setText(DoctorsName.get(i).toString()); //or data.pillName[position]
+        viewholderclass1.dates.setText(Dates.get(i).toString());
         viewholderclass1.editBtndoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -66,10 +69,11 @@ public class DoctorsListAdapter extends RecyclerView.Adapter<DoctorsListAdapter.
     public class ViewHolderClass1 extends RecyclerView.ViewHolder{
 
         Button deleteBtndoctor, editBtndoctor;
-        TextView doctorname;
+        TextView doctorname, dates;
         public ViewHolderClass1(@NonNull View itemView) {
             super(itemView);
         doctorname = itemView.findViewById(R.id.textViewDoctorsName);
+        dates = itemView.findViewById(R.id.textViewdates);
         deleteBtndoctor = itemView.findViewById(R.id.deletebtndoctors);
         editBtndoctor = itemView.findViewById(R.id.editbtndoctors);
 

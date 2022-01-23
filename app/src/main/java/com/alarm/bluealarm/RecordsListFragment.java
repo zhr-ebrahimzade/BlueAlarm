@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class RecordsListFragment extends Fragment {
 
 RecyclerView recyclerRecordsList;
-ArrayList<String> RecordsName = new ArrayList<>();
+ArrayList<String> RecordsDate = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,7 +25,7 @@ ArrayList<String> RecordsName = new ArrayList<>();
 
         recyclerRecordsList = view.findViewById(R.id.recyclerrecordslist);
 
-        RecordsListAdapter recordslistadapter = new RecordsListAdapter(RecordsName ,getContext());
+        RecordsListAdapter recordslistadapter = new RecordsListAdapter(RecordsDate ,getContext());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerRecordsList.setLayoutManager(linearLayoutManager);
         recyclerRecordsList.setAdapter(recordslistadapter);
